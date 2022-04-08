@@ -1,19 +1,19 @@
 ﻿namespace Progect_1.Storage.Entity
 {
-    public class Menu
+    public class Special_offers
     {
         public Guid Id { get; set; }
         public string NameOfFood { get; set; }
         public string NameOfDrink { get; set; }
-        public int Grams { get; set; }
         public int Price { get; set; }
-        public Menu(Guid id, string nameOfFood, string nameOfDrink, int price, int grams)
+        public int Data_Of_Special_Offer { get; set; }
+        public Special_offers(Guid id, string nameOfFood, string nameOfDrink, int price, int data_of_special_offer)
         {
             Id = id;
             NameOfFood = nameOfFood;
             NameOfDrink = nameOfDrink;
-            Grams = grams;
             Price = price;
+            Data_Of_Special_Offer = data_of_special_offer;
         }
     }
 }

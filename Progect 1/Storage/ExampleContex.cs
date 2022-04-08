@@ -10,6 +10,8 @@ namespace Progect_1.Storage
         public ExampleContex()
         {
             Persons = new List<Person>();
+
         }
+
     }
 }
