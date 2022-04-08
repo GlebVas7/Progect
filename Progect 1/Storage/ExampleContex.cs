@@ -14,6 +14,8 @@ namespace Progect_1.Storage
             geoDatas = new List<GeoDatas>();
             Creators = new List<Creator>();
             Persons = new List<Person>();
+
         }
+
     }
 }
