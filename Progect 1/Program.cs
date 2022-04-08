@@ -1,7 +1,13 @@
+using Progect_1.Models;
+using Progect_1.Storage;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddTransient<IPersonModel, PersonModelcs>();
+builder.Services.AddDbContext<ExampleContex>();
 
 var app = builder.Build();
 
