@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddTransient<IPersonModel, PersonModelcs>();
+builder.Services.AddTransient<IPersonModel, PersonModel>();
 builder.Services.AddDbContext<ExampleContex>();
 
 var app = builder.Build();

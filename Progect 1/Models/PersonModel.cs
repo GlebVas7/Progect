@@ -3,10 +3,10 @@ using Progect_1.Storage.Entity;
 
 namespace Progect_1.Models
 {
-    public class PersonModelcs : IPersonModel
+    public class PersonModel : IPersonModel
     {
         private ExampleContex _dbContext;
-        public PersonModelcs(ExampleContex exampleContex)
+        public PersonModel(ExampleContex exampleContex)
         {
             _dbContext = exampleContex;
         }
