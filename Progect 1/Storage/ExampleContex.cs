@@ -13,7 +13,7 @@ namespace Progect_1.Storage
         public IEnumerable<Ingredient> Ingredients { get; set; }
         public IEnumerable<Order> Orders { get; set; }
         public IEnumerable<Review> Reviews { get; set; }
-        public IEnumerable<Special_offer> Special_Offers { get; set; }
+        public IEnumerable<SpecialOffer> Special_Offers { get; set; }
         public ExampleContex()
         {
 
@@ -25,7 +25,7 @@ namespace Progect_1.Storage
             Ingredients = new List<Ingredient>();
             Orders = new List<Order>();
             Reviews = new List<Review>();
-            Special_Offers = new List<Special_offer>();
+            Special_Offers = new List<SpecialOffer>();
 
         }
 
