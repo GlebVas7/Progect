@@ -6,13 +6,6 @@
         public string City { get; set; }
         public string Street { get; set; }
         public int HouseNumber { get; set; }
-      /*  public GeoDatas(Guid id, string city, string street)
-        {
-            Id = id;
-            City = city;
-            Street = street;
-            //HouseNumber = housenumber;
-        }
-*/
+  
     }
 }
