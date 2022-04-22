@@ -9,6 +9,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddTransient<IPersonModel, PersonModel>();
 builder.Services.AddDbContext<ExampleContex>();
 
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
