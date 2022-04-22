@@ -1,5 +1,4 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+﻿<html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,40 +6,122 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Progect_1.styles.css" asp-append-version="true" />
+   
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:ital@1&family=Open+Sans:wght@700&family=Raleway:wght@300,400;600;700&display=swap"
+          rel="stylesheet">
+    
+   
+    <title>French bakery</title>
 </head>
+
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">LOGO</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
+
+
+    <!-- Sidemenu -->
+    <div id="menu" class="sidemenu">
+        <a href="#">HOME</a>
+        <a href="#">ABOUT</a>
+        <a href="#">GALLERY</a>
+        <a href="#">GIFT CARDS</a>
+        <a href="#">LOCATION</a>
+        <a href="#" class="closebtn" onclick="closeFunction()">&times;</a>
+
     </div>
 
-    <footer class="border-top footer text-muted">
+
+    <!-- Header -->
+    <header class="header">
         <div class="container">
-            &copy; 2022 - Progect_1 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            <div class="header_inner">
+                <div id="mainbox" onclick="openFunction()">&#9776;</div>
+                <!-- <div class="header_logo">
+                    <img src="img/png-transparent-a-cloud-dark-clouds-flaky-clouds-cloud.png" alt="">
+                </div> -->
+                <nav class="nav">
+                    <a class="nav_link" href="#">МЕНЮ</a>
+                    <a class="nav_link" href="#">КОНТАКТЫ</a>
+                    <a class="nav_link" href="#">ЛОКАЦИЯ</a>
+                    <a class="nav_link" href="#">ВХОД</a>
+                </nav>
+            </div>
         </div>
-    </footer>
+    </header>
+
+    <!-- Intro -->
+    <div class="intro">
+        <div class="container">
+            <div class="intro_inner">
+                <h1 class="intro_title">French bakery</h1>
+                <h2 class="intro_subtitle">какой-то еще текст</h2>
+                <!-- <a class="btn btn--red" href="#">Find out more</a> -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Our Mission -->
+    <div class="ourMission">
+        <div class="container">
+            <div class="ourMission_inner">
+                <h1 class="ourMission_title">Our Mission</h1>
+                <div class="columns-2">
+                    <p>
+                        Adachi restaurant is a globally influenced Japanese-inspired restaurant nestled in the heart of
+                        Birmingham, Michigan in the Victorian Peabody Mansion. Executive Chef Lloyd Roberts brings with
+                        him years of experience and leads the kitchen team with innovation and superb technique. Adachi
+                        offers an array of gastronomic adventures with many small and large plates, specialty craft
+                        cocktails and a full sushi bar equipped with sashimi and nigiri options flown fresh from Japan.
+                        Sourcing the freshest ingredients both locally and internationally, guests dining with us can
+                        taste the heartfelt commitment to quality.
+                    </p>
+                    <p>
+                        Adachi distinguishes itself by emphasizing on the social experience and taking a vibe-driven
+                        approach to fine dining. The dining room, sushi lounge and cocktail bar evokes a fun sense of
+                        style matched by the chic ambiance and decor.
+                    </p>
+                    <p>
+                        Whether you are joining us for dinner, cocktails, a private party or any special occasion, Adachi
+                        opens its doors to you and promises to make the experience special and memorable. The team
+                        eagerly awaits to show you world-class hospitality.
+                    </p>
+
+                </div>
+                <a class="ourMission_text" href="https://adachirestaurant.com/" target="_blank">
+                    view our menu
+                </a>
+            </div>
+
+            <div class="photo">
+                <img src="img/Без названия.jpg" width="600px" alt="">
+            </div>
+        </div>
+    </div>
+
+    <!-- Animation -->
+    <div class="animation">
+        <div class="container">
+            <div class="animation_title">Stylish and <br>Flavorful <br>Components</div>
+            <img class="rotation1" src="img/png-clipart-vegetarian-cuisine-plate-broccoli-asian-cuisine-09759-plate-leaf-vegetable-food-removebg-preview.png" alt="#">
+            <img class="rotation2"
+                 src="img/png-transparent-asian-cuisine-vegetarian-cuisine-plate-recipe-dish-plate-food-recipe-plate-removebg-preview.png"
+                 alt="#">
+            <img class="rotation3"
+                 src="img/png-transparent-plate-dish-garnish-recipe-fish-plate-food-seafood-recipe-removebg-preview.png"
+                 alt="#">
+            <img class="rotation4" 
+                  src="img/png-transparent-vegetarian-cuisine-plate-recipe-dish-garnish-plate-food-cuisine-vegetarian-food-removebg-preview.png"
+                alt="#">
+                 
+        </div>
+    </div>
+    <div>
+<main role="main">
+@RenderBody()
+</main>
+</div>
+
+    <script src="main.js"></script>
+
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
