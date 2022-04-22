@@ -92,6 +92,7 @@ p {
     top: 0;
     left: 0;
     z-index: 1000;
+    background: grey;
 }
 
 .header_logo {
@@ -302,8 +303,8 @@ p {
     height: 750px;
     background: #31344e url("img/pexels-maria-orlova-4916562.jpg") center no-repeat;
     background-size: cover;
-    padding-top: 100px;
-}
+/*    padding-top: 100px;
+*/}
 
 .intro_title {
     font-family: 'Open Sans', sans-serif;
