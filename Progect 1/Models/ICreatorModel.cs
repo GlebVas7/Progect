@@ -4,7 +4,7 @@ namespace Progect_1.Models
 {
     public interface ICreatorModel
     {
-        void deleteCreator();
+        Task deleteCreator(Guid id);
         List<Creator> getAllCreator();
 
     }

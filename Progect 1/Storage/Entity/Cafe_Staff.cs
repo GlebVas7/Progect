@@ -6,12 +6,12 @@
         public string Name { get; set; }
         public string Lastname { get; set; }
         public string Profession { get; set; }
-        public Cafe_Staff(Guid id, string name, string lastname, string profession)
+        /*public Cafe_Staff(Guid id, string name, string lastname, string profession)
         {
             Id = id;
             Name = name;
             Lastname = lastname;
             Profession = profession;
-        }
+        }*/
     }
 }
