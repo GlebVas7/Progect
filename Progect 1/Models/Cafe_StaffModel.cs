@@ -10,22 +10,34 @@ namespace Progect_1.Models
         {
             _dbContext = exampleContex;
         }
-        public Storage.Entity.Cafe_Staff CreateStaff(Cafe_Staff person)
+        public Cafe_Staff CreateStaff(Cafe_Staff person)
         {
-            throw new NotImplementedException();
+            if (person.Name != null || person.Lastname != null)
+            {
+                _dbContext.Add(person);
+            }
+            else
+            {
+                throw new NotImplementedException();
+            }
+            return person;
         }
 
         public void DeleteStaff(Guid id)
         {
-            throw new NotImplementedException();
+
+           var entity = _dbContext.Cafe_Staffs.FirstOrDefault(x => x.Id == id);
+            if (entity != null)
+                _dbContext.Cafe_Staffs.Remove(entity);
+            _dbContext.SaveChanges();
         }
 
-        public List<Storage.Entity.Cafe_Staff> getAllStaff()
+        public List<Cafe_Staff> getAllStaff()
         {
             throw new NotImplementedException();
         }
 
-        public Storage.Entity.Cafe_Staff GetStaffById(Guid id)
+        public Cafe_Staff GetStaffById(Guid id)
         {
             throw new NotImplementedException();
         }
