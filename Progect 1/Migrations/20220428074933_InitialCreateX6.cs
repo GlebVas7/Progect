@@ -4,7 +4,7 @@
 
 namespace Progect_1.Migrations
 {
-    public partial class InitialCreateX4 : Migration
+    public partial class InitialCreateX6 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
