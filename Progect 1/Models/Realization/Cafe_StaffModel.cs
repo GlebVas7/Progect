@@ -13,13 +13,9 @@ namespace Progect_1.Models
         public Cafe_Staff CreateStaff(Cafe_Staff person)
         {
             if (person.Name != null || person.Lastname != null)
-            {
                 _dbContext.Add(person);
-            }
             else
-            {
                 throw new NotImplementedException();
-            }
             return person;
         }
 

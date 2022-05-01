@@ -9,6 +9,5 @@ namespace Progect_1.Storage.Entity
         public string Name { get; set; }
         public string Lastname { get; set; }
         public string Profession { get; set; }
-      
     }
 }

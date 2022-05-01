@@ -10,6 +10,5 @@ namespace Progect_1.Storage.Entity
         public string Lastname { get; set; }
         public string  Sex { get; set; }
         public string Link { get; set; }
-     
     }
 }

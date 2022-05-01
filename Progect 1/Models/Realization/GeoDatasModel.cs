@@ -1,17 +1,34 @@
-﻿using Progect_1.Storage.Entity;
+﻿using Progect_1.Storage;
+using Progect_1.Storage.Entity;
 
 namespace Progect_1.Models
 {
     public class GeoDatasModel : IGeoDatasModel
     {
+        private ExampleContex _dbContext;
+        public GeoDatasModel(ExampleContex exampleContex)
+        {
+            _dbContext = exampleContex;
+        }
         public GeoDatas AddGeo(GeoDatas geoDatas)
         {
-            throw new NotImplementedException();
+            if (geoDatas.Id != null || geoDatas.Id != null)
+            {
+                _dbContext.Add(geoDatas);
+            }
+            else
+            {
+                throw new NotImplementedException();
+            }
+            return geoDatas;
         }
 
-        public void DeleteGeo(Guid Id)
+        public void DeleteGeo(Guid id)
         {
-            throw new NotImplementedException();
+            var entity = _dbContext.geoDatas.FirstOrDefault(x => x.Id == id);
+            if (entity != null)
+                _dbContext.geoDatas.Remove(entity);
+            _dbContext.SaveChanges();
         }
 
         public List<GeoDatas> GetAllGeoDatas()

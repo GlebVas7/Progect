@@ -10,6 +10,5 @@ namespace Progect_1.Storage.Entity
         public string IndredientForDrink { get; set; }
         public int Grams { get; set; }
         public int Liters { get; set; }
-     
     }
 }

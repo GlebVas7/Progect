@@ -1,17 +1,34 @@
-﻿using Progect_1.Storage.Entity;
+﻿using Progect_1.Storage;
+using Progect_1.Storage.Entity;
 
 namespace Progect_1.Models
 {
     public class IngredientModel : IIngredientModel
     {
-        public Ingredient AddIngredient(Guid id)
+        private ExampleContex _dbContext;
+        public IngredientModel(ExampleContex exampleContex)
         {
-            throw new NotImplementedException();
+            _dbContext = exampleContex;
+        }
+        public Ingredient AddIngredient(Ingredient ingridient)
+        {
+            if (ingridient.Id != null || ingridient.Id != null)
+            {
+                _dbContext.Add(ingridient);
+            }
+            else
+            {
+                throw new NotImplementedException();
+            }
+            return ingridient;
         }
 
         public void DeleteIngredient(Guid Id)
         {
-            throw new NotImplementedException();
+            var entity = _dbContext.Ingredients.FirstOrDefault(x => x.Id == Id);
+            if (entity != null)
+                _dbContext.Ingredients.Remove(entity);
+            _dbContext.SaveChanges();
         }
 
         public List<Ingredient> GetAllIngredients()

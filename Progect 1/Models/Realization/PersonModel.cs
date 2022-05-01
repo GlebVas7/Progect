@@ -13,12 +13,23 @@ namespace Progect_1.Models
 
         public Person CreatePerson(Person person)
         {
-            throw new NotImplementedException();
+            if (person.Id != null || person.Id != null)
+            {
+                _dbContext.Add(person);
+            }
+            else
+            {
+                throw new NotImplementedException();
+            }
+            return person;
         }
 
         public void DeletePerson(Guid id)
         {
-            throw new NotImplementedException();
+            var entity = _dbContext.Persons.FirstOrDefault(x => x.Id == id);
+            if (entity != null)
+                _dbContext.Persons.Remove(entity);
+            _dbContext.SaveChanges();
         }
 
         public List<Person> getAllPersons()

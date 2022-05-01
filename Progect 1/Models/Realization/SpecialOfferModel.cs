@@ -1,17 +1,39 @@
-﻿using Progect_1.Storage.Entity;
+﻿using Progect_1.Storage;
+using Progect_1.Storage.Entity;
 
 namespace Progect_1.Models
 {
     public class SpecialOfferModel : ISpecialOfferModel
     {
+        private ExampleContex _dbContext;
+        public SpecialOfferModel(ExampleContex exampleContex)
+        {
+            _dbContext = exampleContex;
+        }
         public SpecialOffer AddNewDish(SpecialOffer nameOfFood)
         {
-            throw new NotImplementedException();
+            if (nameOfFood.Id != null || nameOfFood.Id != null)
+            {
+                _dbContext.Add(nameOfFood);
+            }
+            else
+            {
+                throw new NotImplementedException();
+            }
+            return nameOfFood;
         }
 
         public SpecialOffer AddNewDrink(SpecialOffer nameOfDrink)
         {
-            throw new NotImplementedException();
+            if (nameOfDrink.Id != null || nameOfDrink.Id != null)
+            {
+                _dbContext.Add(nameOfDrink);
+            }
+            else
+            {
+                throw new NotImplementedException();
+            }
+            return nameOfDrink;
         }
 
         public SpecialOffer ChangeDate(SpecialOffer DataOfSpecialOffer)

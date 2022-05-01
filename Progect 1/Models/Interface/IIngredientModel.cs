@@ -6,7 +6,7 @@ namespace Progect_1.Models
     {
         void DeleteIngredient(Guid Id);
         List<Ingredient> GetAllIngredients();
-        Ingredient AddIngredient(Guid id);
+        Ingredient AddIngredient(Ingredient ingridient);
 
     }
 }

@@ -12,6 +12,7 @@ namespace Progect_1.Storage.Entity
         public int Price_Of_Order { get; set; }
         [Required]
         public Guid PersonId { get; set; }
+
         [ForeignKey(nameof (PersonId))]
         public virtual Person Person { get; set; }
     }

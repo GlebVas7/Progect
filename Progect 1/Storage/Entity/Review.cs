@@ -10,6 +10,7 @@ namespace Progect_1.Storage.Entity
         public string Reviews { get; set; }
         [Required]
         public Guid PersonId { get; set; }
+
         [ForeignKey(nameof(PersonId))]
         public virtual Person Person { get; set; }
     }
