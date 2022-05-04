@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: 'Raleway', sans-serif;
-    font-size: 14px;
+    font-size: 0px;
     color: #6c7279;
     background-color: white;
     -webkit-font-smoothing: antialiased;
@@ -33,6 +33,11 @@ p {
     /* max-width: 1200px; */
     margin: 0 auto;
     /* padding: 0 50px; */
+}
+
+.most_main{
+    position:relative;
+    min-height:100%;
 }
 
 /* Sidemenu
@@ -92,7 +97,7 @@ p {
     top: 0;
     left: 0;
     z-index: 1000;
-    background: grey;
+    background: #1f0a04;
 }
 
 .header_logo {
@@ -115,7 +120,7 @@ p {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #393232;
+    background-color: #1f0a04;
     animation-name: show_header;
     animation-duration: 0.5s;
 }
@@ -137,7 +142,7 @@ p {
 
 .nav {
     display: flex;
-    font-size: 10px;
+    font-size: 14px;
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -149,9 +154,9 @@ p {
     padding: 15px 45px;
     color: #fff;
     text-decoration: none;
-    /* opacity: .75; */
+    opacity: .75; 
     transition: .1s linear;
-    border: 1px solid #fff;
+    /*border: 1px solid #fff;*/
 }
 
     .nav_link:first-child {
@@ -159,25 +164,25 @@ p {
     }
 
     .nav_link:hover {
-        background-color: #fff;
-        color: #574242;
+        color: white;
+        opacity: 1;
     }
 
 /* Our Mission
 *********************/
 
 .ourMission {
-    background-color: #574242;
+    background-color: #1f0a04;
     color: #fff;
     position: relative;
-    top: -100px;
+    top: 0px;
     left: 0;
     width: 85%;
 }
 
 .ourMission_inner {
     padding-top: 90px;
-    padding-bottom: 350px;
+    padding-bottom: 70px;
 }
 
 .ourMission_title {
@@ -186,11 +191,13 @@ p {
     font-size: 46px;
 }
 
-.columns-2 {
-    column-count: 2;
+.columns2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    z-index: auto;
     column-gap: 50px;
-    padding-left: 350px;
-    padding-right: 150px;
+    padding-left: 150px;
+    padding-right: 350px;
     padding-bottom: 50px;
 }
 
@@ -236,8 +243,8 @@ p {
 *********************/
 .photo {
     position: absolute;
-    right: 0;
-    bottom: -100px;
+    right: -250px;
+    bottom: -325px;
 }
 
 /* Animation
@@ -301,17 +308,18 @@ p {
     flex-direction: column;
     justify-content: center;
     height: 750px;
-    background: #31344e url("img/pexels-maria-orlova-4916562.jpg") center no-repeat;
+    /*background:  url("") center no-repeat;*/
+    background: #31344e url("img/rest_room1.1.jpg") center no-repeat;
     background-size: cover;
 /*    padding-top: 100px;
 */}
 
 .intro_title {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 65px;
+    font-family: 'Libre Bodoni', serif;
+    font-size: 100px;
     color: white;
     font-weight: bold;
-    margin: 0 0 30px 0;
+    margin: 0 0 0px 0;
     text-transform: uppercase;
     line-height: 1.1;
 }
@@ -327,9 +335,111 @@ body {
   margin-bottom: 60px;
 }
 .intro_subtitle {
+    font-family: 'Rajdhani', sans-serif;
     font-size: 22px;
     color: white;
     line-height: 1.5;
     font-weight: 400;
     margin-bottom: 60px;
 }
+
+/* Footer
+*********************/
+
+/*.footer {
+    background-color: #3a3e64;*/
+    /*height: 50px;
+    margin-top: -50px;*/
+    /*position:absolute;
+    left:0;
+    bottom:0;
+    width:100%;
+}
+
+.footer_inner {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 70px 0;
+}
+
+.footer_block {
+    width: 33.33333%;
+    text-align: center;
+    padding: 0 15px;
+}
+
+.footer_title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.footer_address {
+    font-size: 14px;
+    font-style: normal;
+    color: rgba(255, 255, 255, .5);
+    line-height: 1.5;
+}
+
+.footer_text {
+    font-size: 14px;
+    color: rgba(255, 255, 255, .5);
+    line-height: 1.5;
+}*/
+
+/* Social
+*********************/
+
+/*.social {
+    display: flex;
+}
+
+.social--footer {
+    justify-content: center;
+}
+
+.social_item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #e8ecee;
+    margin-right: 4px;
+    background-color: #fff;
+    transition: background .1s linear;
+}
+
+.social_item:hover {
+    background-color: #e8ecee;
+}
+
+.social_item:hover .social_icon {
+    fill: black;
+}
+
+.social_icon {
+    fill: #c6cacc;
+    display: block;
+    height: 18px;
+    transition: fill .1s linear;
+}
+
+.social--footer .social_item {
+    background-color: transparent;
+    border-width: 2px;
+    border-color: #fff;
+    border-radius: 2px;
+}
+
+.social--footer .social_item:hover {
+    background-color: white;
+}
+
+.social--footer .social_icon {
+    fill: white;
+}*/
+
+
