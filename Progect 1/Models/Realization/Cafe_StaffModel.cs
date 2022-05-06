@@ -35,9 +35,6 @@ namespace Progect_1.Models
 
         public async Task<IList<Cafe_Staff>> getAllStaff() => await _dbContext.Cafe_Staffs.ToListAsync();
 
-        public async Task GetStaffById(Guid id) // хз зачем это 
-        {
-            throw new NotImplementedException();
-        }
+       
     }
 }
