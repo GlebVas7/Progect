@@ -23,9 +23,7 @@ namespace Progect_1.Models
             await _dbContext.SaveChangesAsync();
         }
 
-        public List<Creator> getAllCreator()
-        {
-            throw new NotImplementedException();
-        }
+        public async Task <IList<Creator>> getAllCreator() => await _dbContext.Creators.ToListAsync();
+
     }
 }
