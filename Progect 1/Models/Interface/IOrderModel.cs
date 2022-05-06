@@ -4,9 +4,9 @@ namespace Progect_1.Models
 {
     public interface IOrderModel
     {
-        void DeleteOrder(Guid Id);
-        Order AddNewDish(Order nameOfFood);
-        Order AddNewDrink(Order nameOfDrink);
+        Task DeleteOrder(int Id);
+        Task AddNewDish(string nameOfFood);
+        Task AddNewDrink(string nameOfDrink);
 
     }
 }

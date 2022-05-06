@@ -14,7 +14,7 @@ namespace Progect_1.Storage
         public DbSet<Order> Orders { get; set; }
         public DbSet<Review> Reviews { get; set; }
         public DbSet<SpecialOffer> Special_Offers { get; set; }
-        public ExampleContex(DbContextOptions<ExampleContex> options):base(options)
+        public ExampleContex()
         {
 
             //geoDatas = new List<GeoDatas>();
