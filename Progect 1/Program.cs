@@ -1,3 +1,4 @@
+using Microsoft.EntityFrameworkCore;
 using Progect_1.Models;
 using Progect_1.Storage;
 using System.Configuration;
@@ -7,9 +8,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
+var connectionString = builder.Configuration.GetConnectionString("DbConnection");
 builder.Services.AddTransient<IPersonModel, PersonModel>();
-builder.Services.AddDbContext<ExampleContex>();
+builder.Services.AddDbContext<ExampleContex>(param => param.UseSqlServer(connectionString));
 
 
 var app = builder.Build();
