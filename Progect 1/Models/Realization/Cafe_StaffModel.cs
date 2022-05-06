@@ -1,5 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Progect_1.Storage;
+﻿using Progect_1.Storage;
 using Progect_1.Storage.Entity;
 
 namespace Progect_1.Models
@@ -11,31 +10,30 @@ namespace Progect_1.Models
         {
             _dbContext = exampleContex;
         }
-        public async Task CreateStaff(Cafe_Staff person)
+        public Cafe_Staff CreateStaff(Cafe_Staff person)
         {
-            person.Id = Guid.NewGuid();
             if (person.Name != null || person.Lastname != null)
-            {
                 _dbContext.Add(person);
-                await _dbContext.SaveChangesAsync();
-            }
             else
                 throw new NotImplementedException();
-            
+            return person;
         }
 
-        public async Task DeleteStaff(Guid id)
+        public void DeleteStaff(Guid id)
         {
 
            var entity = _dbContext.Cafe_Staffs.FirstOrDefault(x => x.Id == id);
             if (entity != null)
                 _dbContext.Cafe_Staffs.Remove(entity);
-            _dbContext.SaveChangesAsync();
+            _dbContext.SaveChanges();
         }
 
-        public async Task<IList<Cafe_Staff>> getAllStaff() => await _dbContext.Cafe_Staffs.ToListAsync();
+        public List<Cafe_Staff> getAllStaff()
+        {
+            throw new NotImplementedException();
+        }
 
-        public async Task GetStaffById(Guid id) // хз зачем это 
+        public Cafe_Staff GetStaffById(Guid id)
         {
             throw new NotImplementedException();
         }

@@ -4,12 +4,10 @@ namespace Progect_1.Models
 {
     public interface ISpecialOfferModel
     {
-        void DeleteSpecialOffer(Guid Id);
-        SpecialOffer AddNewDish(SpecialOffer nameOfFood);
-        SpecialOffer AddNewDrink(SpecialOffer nameOfDrink);
-        SpecialOffer ChangeDate(SpecialOffer DataOfSpecialOffer);
-        SpecialOffer ChangePrice(SpecialOffer Price);
-
-
+        Task DeleteSpecialOffer(int Id);
+        Task AddNewDish(string nameOfFood);
+        Task AddNewDrink(string nameOfDrink);
+        Task ChangeDate(int DataOfSpecialOffer);
+        Task ChangePrice(int Price);
     }
 }
