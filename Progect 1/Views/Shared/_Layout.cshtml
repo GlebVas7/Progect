@@ -1,176 +1,555 @@
 ﻿<!DOCTYPE html>
-﻿<html lang="en">
-<!DOCTYPE html>
 <html lang="en">
-<div class="most_main">
-
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Progect_1</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/Progect_1.styles.css" asp-append-version="true" />
-   
- <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:wght@500&family=Montserrat:ital,wght@1,100&family=Open+Sans:wght@700&family=Rajdhani&family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">     <!-- Sprite -->
-    <svg style="display: none;">
-        <symbol id="facebook" viewBox="0 0 430.113 430.114">
-            <g>
-                <path
-                    d="M158.081,83.3c0,10.839,0,59.218,0,59.218h-43.385v72.412h43.385v215.183h89.122V214.936h59.805
-                        c0,0,5.601-34.721,8.316-72.685c-7.784,0-67.784,0-67.784,0s0-42.127,0-49.511c0-7.4,9.717-17.354,19.321-17.354
-                        c9.586,0,29.818,0,48.557,0c0-9.859,0-43.924,0-75.385c-25.016,0-53.476,0-66.021,0C155.878-0.004,158.081,72.48,158.081,83.3z" />
-            </g>
-        </symbol>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Complete Responsive Food / Restaurant Website Design Tutorial</title>
+   @await Html.PartialAsync("csspartial")
 
-        <symbol id="twitter" viewBox="0 0 50 50">
-            <g>
-                <path
-                    d="M 50.0625 10.4375 C 48.214844 11.257813 46.234375 11.808594 44.152344 12.058594 C 46.277344 10.785156 47.910156 8.769531 48.675781 6.371094 C 46.691406 7.546875 44.484375 8.402344 42.144531 8.863281 C 40.269531 6.863281 37.597656 5.617188 34.640625 5.617188 C 28.960938 5.617188 24.355469 10.21875 24.355469 15.898438 C 24.355469 16.703125 24.449219 17.488281 24.625 18.242188 C 16.078125 17.8125 8.503906 13.71875 3.429688 7.496094 C 2.542969 9.019531 2.039063 10.785156 2.039063 12.667969 C 2.039063 16.234375 3.851563 19.382813 6.613281 21.230469 C 4.925781 21.175781 3.339844 20.710938 1.953125 19.941406 C 1.953125 19.984375 1.953125 20.027344 1.953125 20.070313 C 1.953125 25.054688 5.5 29.207031 10.199219 30.15625 C 9.339844 30.390625 8.429688 30.515625 7.492188 30.515625 C 6.828125 30.515625 6.183594 30.453125 5.554688 30.328125 C 6.867188 34.410156 10.664063 37.390625 15.160156 37.472656 C 11.644531 40.230469 7.210938 41.871094 2.390625 41.871094 C 1.558594 41.871094 0.742188 41.824219 -0.0585938 41.726563 C 4.488281 44.648438 9.894531 46.347656 15.703125 46.347656 C 34.617188 46.347656 44.960938 30.679688 44.960938 17.09375 C 44.960938 16.648438 44.949219 16.199219 44.933594 15.761719 C 46.941406 14.3125 48.683594 12.5 50.0625 10.4375 Z" />
-            </g>
-        </symbol>
-
-        <symbol id="instagram" viewBox="0 0 50 50">
-            <g>
-                <path
-                    d="M 16 3 C 8.83 3 3 8.83 3 16 L 3 34 C 3 41.17 8.83 47 16 47 L 34 47 C 41.17 47 47 41.17 47 34 L 47 16 C 47 8.83 41.17 3 34 3 L 16 3 z M 37 11 C 38.1 11 39 11.9 39 13 C 39 14.1 38.1 15 37 15 C 35.9 15 35 14.1 35 13 C 35 11.9 35.9 11 37 11 z M 25 14 C 31.07 14 36 18.93 36 25 C 36 31.07 31.07 36 25 36 C 18.93 36 14 31.07 14 25 C 14 18.93 18.93 14 25 14 z M 25 16 C 20.04 16 16 20.04 16 25 C 16 29.96 20.04 34 25 34 C 29.96 34 34 29.96 34 25 C 34 20.04 29.96 16 25 16 z" />
-            </g>
-        </symbol>
-
-    </svg>
-
-   
-    <title>French bakery</title>
-     <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="header_inner">
-                <div id="mainbox" onclick="openFunction()">&#9776;</div>
-                <!-- <div class="header_logo">
-                    <img src="img/png-transparent-a-cloud-dark-clouds-flaky-clouds-cloud.png" alt="">
-                </div> -->
-                <nav class="nav">
-                    <a class="nav_link" href="#">МЕНЮ</a>
-                    <a class="nav_link" href="#">КОНТАКТЫ</a>
-                    <a class="nav_link" href="#">ЛОКАЦИЯ</a>
-                    <a class="nav_link" href="#">ВХОД</a>
-                </nav>
-            </div>
-        </div>
-    </header>
 </head>
 
-@*<body>
-
-
-    <!-- Sidemenu -->
-    <div id="menu" class="sidemenu">
-        <a href="#">HOME</a>
-        <a href="#">ABOUT</a>
-        <a href="#">GALLERY</a>
-        <a href="#">GIFT CARDS</a>
-        <a href="#">LOCATION</a>
-        <a href="#" class="closebtn" onclick="closeFunction()">&times;</a>
-
-    </div>
-
-
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="header_inner">
-                <div id="mainbox" onclick="openFunction()">&#9776;</div>
-                <!-- <div class="header_logo">
-                    <img src="img/png-transparent-a-cloud-dark-clouds-flaky-clouds-cloud.png" alt="">
-                </div> -->
-                <nav class="nav">
-                    <a class="nav_link" href="#">МЕНЮ</a>
-                    <a class="nav_link" href="#">КОНТАКТЫ</a>
-                    <a class="nav_link" href="#">ЛОКАЦИЯ</a>
-                    <a class="nav_link" href="#">ВХОД</a>
-                </nav>
-            </div>
-        </div>
-    </header>
-<</body>*@
-  @*  <footer class="footer">
-        <div class="container">
-
-            <div class="footer_inner">
-                <div class="footer_block">
-                    <h4 class="footer_title">Location</h4>
-                    <address class="footer_address">
-                        <div>3481 Melrose Place</div>
-                        <div> Beverly Hills, CA 90210</div>
-                    </address>
-                </div>
-
-                <div class="footer_block">
-                    <h4 class="footer_title">Share with Love</h4>
-                    <div class="social  social--footer">
-                        <div class="social">
-                            <a class="social_item" href="#" target="_blank">
-                                <svg class="social_icon">
-                                    <use xlink:href="#facebook"></use>
-                                </svg>
-                            </a>
-                            <a class="social_item" href="#" target="_blank">
-                                <svg class="social_icon">
-                                    <use xlink:href="#twitter"></use>
-                                </svg>
-                            </a>
-                            <a class="social_item" href="#" target="_blank">
-                                <svg class="social_icon">
-                                    <use xlink:href="#instagram"></use>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="footer_block">
-                    <h4 class="footer_title">About activebox</h4>
-                    <div class="footer_text">
-                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec ullamcorper nulla non
-                            metus auctor fringilla.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="copyright">
-            <div class="container">
-                <div class="copyright_text">
-                    <div>Copyright © 2015 ActiveBox. All Rights Reserved</div>
-                    <div> Made <span>by Kamal Chaneman</span></div>
-                </div>
-            </div>
-
-        </div>
-    </footer>*@
-</div>
-    
-  <div>
-<main role="main">
-@RenderBody()
-</main>
-</div>
-  
-    <script src="main.js"></script>
-
-
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
-
-@*</head>
-*@</html>
 <body>
-</body>
-</html>
+   @RenderBody()
+   <!-- header section starts     -->
 
-    
+   <section class="header">
+
+      <a href="#" class="logo"> <i class="fas fa-utensils"></i> Kyoto. </a>
+
+      <nav class="navbar">
+         <a href="#МЕНЮ">МЕНЮ</a>
+         <a href="#КОНТАКТЫ">КОНТАКТЫ</a>
+         <a href="#СОТРУДНИКИ">СОТРУДНИКИ</a>
+         <a href="#ВХОД" class="login">ВХОД</a>
+      </nav>
+
+      <div id="menu-btn" class="fas fa-bars"></div>
+
+   </section>
+
+   <!-- header section ends    -->
+
+   <!-- home section starts  -->
+
+   <section class="home" id="home">
+
+      <div class="swiper home-slider">
+
+         <div class="swiper-wrapper">
+
+            <div class="swiper-slide slide" style="background: url(img/slider.jpg) no-repeat;">
+               <div class="content">
+                  <span>KYOTO</span>
+                  <h3>Современная Японская Кухня</h3>
+               </div>
+            </div>
+
+            <div class="swiper-slide slide" style="background: url(img/slider1.jpg) no-repeat;">
+               <div class="content">
+                  <span>FOOD</span>
+                  <h3>aутентичные и приготовленные по традиционным рецептам блюда фокусируются на исключительных вкусах
+                     и красивой подаче</h3>
+                  <a href="#" class="btn">посмотреть</a>
+               </div>
+            </div>
+
+            <div class="swiper-slide slide" style="background: url(img/slider2.jpg) no-repeat;">
+               <div class="content">
+                  <span>DRINKS</span>
+                  <h3>коллекция напитков Kyoto исследует новые и необычные вкусы, искусно подобранные для дополнения
+                     самых восхитительных блюд в меню</h3>
+                  <a href="#" class="btn">посмотреть</a>
+               </div>
+            </div>
+
+         </div>
+
+         <div class="swiper-button-next"></div>
+         <div class="swiper-button-prev"></div>
+
+      </div>
+
+   </section>
+
+   <!-- home section ends -->
+
+   <!-- about section starts  -->
+
+   <section class="about" id="about">
+
+      <div class="image">
+         <img src="img/facade.jpg" alt="">
+      </div>
+
+      <div class="content">
+         <h3 class="title">О нас</h3>
+         <p>Kyoto — это независимый ресторан, где каждый пункт меню создается с заботой, страстью и любовью. Все в этом
+            месте построено по японским принципам: вежливое обслуживание, свежие продукты с ярким вкусом, натуральные
+            методы приготовления пищи и еда, которой наслаждаются все пять чувств.<br>
+            Мы считаем, что ресторан – это еще и форма развлечения. Предоставляя отличный сервис, красивую подачу блюд и
+            вкусную кухню, мы уверены, что посетители получат наилучшее впечатление от японского ресторана Kyoto и
+            японской кухни.<br>
+            Мы гарантируем, что вы найдете то, что удовлетворит пристрастия каждого.
+         </p>
+         <a href="#" class="btn">read more</a>
+      </div>
+
+   </section>
+
+   <!-- about section ends -->
+
+   <!-- food section starts  -->
+
+   <section class="food" id="food">
+
+      <div class="heading">
+         <h3>Новинки</h3>
+      </div>
+
+      <div class="swiper food-slider">
+
+         <div class="swiper-wrapper">
+
+            <div class="swiper-slide slide" data-name="food-1">
+               <img src="img/удон_с_грибами-removebg-preview.png" alt="">
+               <h3>Удон с грибами</h3>
+               <div class="price">699 &#8381</div>
+            </div>
+
+            <div class="swiper-slide slide" data-name="food-2">
+               <img src="img/рамен1-removebg.png" alt="">
+               <h3>Рамён со свининой</h3>
+               <div class="price">699 &#8381</div>
+            </div>
+
+            <div class="swiper-slide slide" data-name="food-3">
+               <img src="img/сашими_креветка1-removebg-preview.png" alt="">
+               <h3>Сашими креветка</h3>
+               <div class="price">549 &#8381</div>
+            </div>
+
+            <div class="swiper-slide slide" data-name="food-4">
+               <img src="img/суши1-removebg-preview.png" alt="">
+               <h3>Kyoto сет</h3>
+               <div class="price">1299 &#8381</div>
+            </div>
+
+            <div class="swiper-slide slide" data-name="food-5">
+               <img src="img/якитори1-removebg-preview.png" alt="">
+               <h3>якитори из курицы</h3>
+               <div class="price">549 &#8381</div>
+            </div>
+
+         </div>
+
+         <div class="swiper-pagination"></div>
+
+      </div>
+
+   </section>
+
+   <!-- food section ends -->
+
+   <!-- food preview section starts  -->
+
+   <section class="food-preview-container">
+
+      <div id="close-preview" class="fas fa-times"></div>
+      
+      <div class="food-preview" data-target="food-1">
+         <img src="img/удон_с_грибами-removebg-preview.png" alt="">
+         <h3>Удон с грибами</h3>
+         <p>Пшеничная лапша удон с грибами сиитакэ, мороковью, луком и кунжутом, приготовленная на ВОК с кисло-сладким соусом<br>450 гр</p>
+         <div class="price">699 &#8381</div>
+      </div>
+
+      <div class="food-preview" data-target="food-2">
+         <img src="img/рамен1-removebg.png" alt="">
+         <h3>Рамён со свининой</h3>
+         <p>Ароматный рамён со свининой, пшеничной лапшой, яйцом, грибами шиитаке, украшенный зелёным луком<br>
+         500 гр</p>
+         <div class="price">699 &#8381</div>
+      </div>
+
+      <div class="food-preview" data-target="food-3">
+         <img src="img/сашими_креветка1-removebg-preview.png" alt="">
+         <h3>Сашими креветка</h3>
+         <p>Сашими из креветки с листьями сезонного салата и лаймом<br>110 гр</p>
+         <div class="price">549 &#8381</div>
+      </div>
+
+      <div class="food-preview" data-target="food-4">
+         <img src="img/суши1-removebg-preview.png" alt="">
+         <h3>KYOTO сет</h3>
+         <p>Суши с лососем (2 шт.), суши с авокадо (2 шт.), суши с хиромасой (2 шт.), гунканы с красной икрой (2 шт.), гунканы с угрём (2 шт.)<br>380 гр</p>
+         <div class="price">1299 &#8381</div>
+      </div>
+
+      <div class="food-preview" data-target="food-5">
+         <img src="img/якитори1-removebg-preview.png" alt="">
+         <h3>Якитори из курицы</h3>
+         <p>Якитори из курицы с салатом из огурцов</p>
+         <div class="price">549 &#8381</div>
+      </div>
+
+   </section>
+
+   <!-- food preview section ends -->
+
+
+   <!-- menu section starts  -->
+
+   <section class="menu" id="menu">
+
+      <div class="heading">
+         <h3>Меню</h3>
+      </div>
+
+      <div class="swiper menu-slider">
+
+         <div class="swiper-wrapper">
+            <!-- Супы -->
+            <div class="swiper-slide slide">
+               <h3 class="title">Супы</h3>
+               <div class="box-container">
+                  <div class="box">
+                     <div class="info">
+                        <h3>Мисо-рамён со свининой</h3>
+                        <p>Мисо-рамён со свининой, пшеничной лапшой, нори и зелёным луком<br>500 гр</p>
+                     </div>
+                     <div class="price">699&#8381</div>
+                  </div>
+                  <div class="box">
+                     <div class="info">
+                        <h3>Мисо-суп</h3>
+                        <p>Мисо-суп с креветками и тофу<br>450 гр</p>
+                     </div>
+                     <div class="price">699&#8381</div>
+                  </div>
+                  <div class="box">
+                     <div class="info">
+                        <h3>Мисо-суп</h3>
+                        <p>Мисо-суп с тофу и водорослями<br>450 гр</p>
+                     </div>
+                     <div class="price">549&#8381</div>
+                  </div>
+                  <div class="box">
+                     <div class="info">
+                        <h3>Рамён с уткой</h3>
+                        <p>Острый рамён с уткой, пшеничной лапшой, грибами и яйцом<br>600 гр</p>
+                     </div>
+                     <div class="price">799&#8381</div>
+                  </div>
+                  <div class="box">
+                     <div class="info">
+                        <h3>Рамён со свининой</h3>
+                        <p>Рамён со свининой, яичной лапшой, черри и яйцом<br>600 гр</p>
+                     </div>
+                     <div class="price">699&#8381</div>
+                  </div>
+                  <div class="box">
+                     <div class="info">
+                        <h3>Рамён с курицей танкацу</h3>
+                        <p>Рамён с курицей танкацу, яичной лапшой, листьями романо и кунжутом<br>500 гр</p>
+                     </div>
+                     <div class="price">699&#8381</div>
+                  </div>
+               </div>
+            </div>
+            <!-- Гедза -->
+            <div class="swiper-slide slide">
+               <h3 class="title">Гёдза</h3>
+               <div class="box-container">
+                  <div class="box">
+                     <div class="info">
+                        <h3>Гёдза со свининой</h3>
+                        <p>200 гр</p>
+                     </div>
+                     <div class="price">549&#8381</div>
+                  </div>
+                  <div class="box">
+                     <div class="info">
+                        <h3>Гёдза с морепродуктами</h3>
+                        <p>200 гр</p>
+                     </div>
+                     <div class="price">599&#8381</div>
+                  </div>
+                  <div class="box">
+                     <div class="info">
+                        <h3>Гёдза с креветками</h3>
+                        <p>200 гр</p>
+                     </div>
+                     <div class="price">599&#8381</div>
+                  </div>
+                  <div class="box">
+                     <div class="info">
+                        <h3>Гёдза с овощами</h3>
+                        <p>200 гр</p>
+                     </div>
+                     <div class="price">499&#8381</div>
+                  </div>
+               </div>
+            </div>
+            <!-- Гунканы -->
+            <div class="swiper-slide slide">
+               <h3 class="title">Гунканы</h3>
+               <div class="box-container">
+                  <div class="box">
+                     <div class="info">
+                        <h3>Гунканы терияки сет</h3>
+                        <p>с лососем, крабом, угрём и курицей<br>350 гр</p>
+                     </div>
+                     <div class="price">999&#8381</div>
+                  </div>
+                  <div class="box">
+                     <div class="info">
+                        <h3>Гунканы сет</h3>
+                        <p>с лососем, черной икрой, крабом, тунцом, запечёнными креветками и авокадо<br>300 гр</p>
+                     </div>
+                     <div class="price">1599&#8381</div>
+                  </div>
+                  <div class="box">
+                     <div class="info">
+                        <h3>Гунканы с королевским крабом</h3>
+                        <p>150 гр</p>
+                     </div>
+                     <div class="price">599&#8381</div>
+                  </div>
+                  <div class="box">
+                     <div class="info">
+                        <h3>Гунканы с водорослями</h3>
+                        <p>150 гр</p>
+                     </div>
+                     <div class="price">449&#8381</div>
+                  </div>
+                  <div class="box">
+                     <div class="info">
+                        <h3>Гунканы с грибами шимиджи</h3>
+                        <p>150 гр</p>
+                     </div>
+                     <div class="price">449&#8381</div>
+                  </div>
+               </div>
+            </div>
+            <!-- Роллы -->
+            <div class="swiper-slide slide">
+               <h3 class="title">Роллы</h3>
+               <div class="box-container">
+                  <div class="box">
+                     <div class="info">
+                        <h3>Роллы с крабом</h3>
+                        <p>300 гр</p>
+                     </div>
+                     <div class="price">899&#8381</div>
+                  </div>
+                  <div class="box">
+                     <div class="info">
+                        <h3>Роллы с запечённым лососем</h3>
+                        <p>250 гр</p>
+                     </div>
+                     <div class="price">799&#8381</div>
+                  </div>
+                  <div class="box">
+                     <div class="info">
+                        <h3>Роллы Калифорния</h3>
+                        <p>300 гр</p>
+                     </div>
+                     <div class="price">899&#8381</div>
+                  </div>
+                  <div class="box">
+                     <div class="info">
+                        <h3>Роллы с лососем и огурцом</h3>
+                        <p>300 гр</p>
+                     </div>
+                     <div class="price">799&#8381</div>
+                  </div>
+                  <div class="box">
+                     <div class="info">
+                        <h3>Роллы с лососем и тунцом</h3>
+                        <p>300 гр</p>
+                     </div>
+                     <div class="price">799&#8381</div>
+                  </div>
+                  <div class="box">
+                     <div class="info">
+                        <h3>Роллы с тунцом и авокадо</h3>
+                        <p>300 гр</p>
+                     </div>
+                     <div class="price">899&#8381</div>
+                  </div>
+               </div>
+            </div>
+
+            <div class="swiper-slide slide">
+               <h3 class="title">dessert</h3>
+               <div class="box-container">
+                  <div class="box">
+                     <div class="info">
+                        <h3>sweet dessets</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex, dolores.</p>
+                     </div>
+                     <div class="price">$49.99</div>
+                  </div>
+                  <div class="box">
+                     <div class="info">
+                        <h3>sweet dessets</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex, dolores.</p>
+                     </div>
+                     <div class="price">$49.99</div>
+                  </div>
+                  <div class="box">
+                     <div class="info">
+                        <h3>sweet dessets</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex, dolores.</p>
+                     </div>
+                     <div class="price">$49.99</div>
+                  </div>
+                  <div class="box">
+                     <div class="info">
+                        <h3>sweet dessets</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex, dolores.</p>
+                     </div>
+                     <div class="price">$49.99</div>
+                  </div>
+               </div>
+            </div>
+
+         </div>
+
+         <div class="swiper-pagination"></div>
+
+      </div>
+
+   </section>
+
+   <!-- menu section ends -->
+
+   <!-- order section starts  -->
+
+   <section class="order" id="order">
+
+      <div class="heading">
+         <span>order now</span>
+         <h3>fast home delivery</h3>
+      </div>
+
+      <form action="">
+         <div class="box-container">
+            <div class="box">
+               <div class="inputBox">
+                  <span>full name</span>
+                  <input type="text" placeholder="enter your name">
+               </div>
+               <div class="inputBox">
+                  <span>food name</span>
+                  <input type="text" placeholder="food you want">
+               </div>
+               <div class="inputBox">
+                  <span>order details</span>
+                  <input type="text" placeholder="specifics with food">
+               </div>
+               <div class="inputBox">
+                  <span>your address</span>
+                  <textarea name="" placeholder="enter your address" id="" cols="30" rows="10"></textarea>
+               </div>
+            </div>
+            <div class="box">
+               <div class="inputBox">
+                  <span>number</span>
+                  <input type="number" placeholder="enter your number">
+               </div>
+               <div class="inputBox">
+                  <span>how much</span>
+                  <input type="number" placeholder="how many you want">
+               </div>
+               <div class="inputBox">
+                  <span>when you want</span>
+                  <input type="datetime-local">
+               </div>
+               <div class="inputBox">
+                  <span>our address</span>
+                  <iframe class="map"
+                     src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d60307.59083109428!2d72.840725!3d19.141651!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b63aceef0c69%3A0x2aa80cf2287dfa3b!2sJogeshwari%20West%2C%20Mumbai%2C%20Maharashtra%20400047!5e0!3m2!1sen!2sin!4v1642222128240!5m2!1sen!2sin"
+                     allowfullscreen="" loading="lazy"></iframe>
+               </div>
+            </div>
+         </div>
+         <input type="submit" value="order now" class="btn">
+      </form>
+
+   </section>
+
+   <!-- order section ends -->
+
+   <!-- footer section starts  -->
+
+   <section class="footer">
+
+      <div class="icons-container">
+
+         <div class="icons">
+            <i class="fas fa-clock"></i>
+            <h3>opening hours</h3>
+            <p>07:00am to 10:00pm</p>
+         </div>
+
+         <div class="icons">
+            <i class="fas fa-phone"></i>
+            <h3>phone</h3>
+            <p>+123-456-7890</p>
+            <p>+111-222-3333</p>
+         </div>
+
+         <div class="icons">
+            <i class="fas fa-envelope"></i>
+            <h3>email</h3>
+            <p>shaikhanas@gmail.com</p>
+            <p>anasbhai@gmail.com</p>
+         </div>
+
+         <div class="icons">
+            <i class="fas fa-map"></i>
+            <h3>address</h3>
+            <p>mumbai, india - 400104</p>
+         </div>
+
+      </div>
+
+      <div class="share">
+         <a href="#" class="fab fa-facebook-f"></a>
+         <a href="#" class="fab fa-twitter"></a>
+         <a href="#" class="fab fa-instagram"></a>
+         <a href="#" class="fab fa-linkedin"></a>
+      </div>
+
+      <div class="credit"> created by <span>Kyoto</span> | all rights reserved! </div>
+
+   </section>
+
+   <!-- footer section ends  -->
+
+
+
+
+
+
+
+
+   <script src="https://use.fontawesome.com/329c6c77c2.js"></script>
+   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+   <!-- custom js file link  -->
+   <script src="js/script.js"></script>
+   <script src="js/form.js"></script>
+
+   <script>
+      lightGallery(document.querySelector('.gallery .gallery-container'));
+   </script>
+
+</body>
+
+</html>
