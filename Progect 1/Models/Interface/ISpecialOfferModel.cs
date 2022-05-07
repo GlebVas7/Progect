@@ -4,7 +4,7 @@ namespace Progect_1.Models
 {
     public interface ISpecialOfferModel
     {
-        Task DeleteSpecialOffer(int Id);
+        Task DeleteSpecialOffer(Guid Id);
         Task AddNewDish(string nameOfFood);
         Task AddNewDrink(string nameOfDrink);
         Task ChangeDate(int DataOfSpecialOffer);

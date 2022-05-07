@@ -1,4 +1,5 @@
-﻿using Progect_1.Storage;
+﻿using Microsoft.EntityFrameworkCore;
+using Progect_1.Storage;
 using Progect_1.Storage.Entity;
 
 namespace Progect_1.Models
@@ -10,41 +11,36 @@ namespace Progect_1.Models
         {
             _dbContext = exampleContex;
         }
-
-        public Person CreatePerson(Person person)
+        public async Task CreatePerson(Person person)
         {
+            person.Id = Guid.NewGuid();
             if (person.Id != null || person.Id != null)
             {
                 _dbContext.Add(person);
+                await _dbContext.SaveChangesAsync();
             }
             else
             {
                 throw new NotImplementedException();
             }
-            return person;
         }
 
-        public void DeletePerson(Guid id)
+        public async Task DeletePerson(Guid id)
         {
             var entity = _dbContext.Persons.FirstOrDefault(x => x.Id == id);
             if (entity != null)
                 _dbContext.Persons.Remove(entity);
-            _dbContext.SaveChanges();
+            await _dbContext.SaveChangesAsync();
         }
+        public async Task<IList<Person>> getAllPersons() => await _dbContext.Persons.ToListAsync();
 
-        public List<Person> getAllPersons()
-        {
-            return _dbContext.Persons.ToList();
-        }
-
-        public Person GetPersonById(Guid id)
-        {
-            var person =  _dbContext.Persons.FirstOrDefault(x => x.Id == id);
-
-            if(person == null)
-                throw new NotImplementedException();
-
-            return person;
-        }
+        //public async Task GetPersonById(Guid id)
+        //{
+           // var person =  _dbContext.Persons.FirstOrDefault(x => x.Id == id);
+          //  if (person.Id != null)
+           //     _dbContext.Persons.Remove(person);
+          //  else
+           //     throw new NotImplementedException();
+        //}
     }
 }

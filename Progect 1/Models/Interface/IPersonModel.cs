@@ -5,8 +5,8 @@ namespace Progect_1.Models
     public interface IPersonModel
     {
         Task <IList<Person>> getAllPersons();
-        Task GetPersonById(int id);
-        Task CreatePerson(int person);
-        Task DeletePerson(int id);
+       // Task GetPersonById(Guid id);
+        Task CreatePerson(Person person);
+        Task DeletePerson(Guid id);
     }
 }

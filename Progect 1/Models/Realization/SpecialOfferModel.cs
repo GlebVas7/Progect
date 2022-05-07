@@ -10,45 +10,69 @@ namespace Progect_1.Models
         {
             _dbContext = exampleContex;
         }
-        public SpecialOffer AddNewDish(SpecialOffer nameOfFood)
+        public async Task AddNewDish(string nameOfFood)
         {
-            if (nameOfFood.Id != null || nameOfFood.Id != null)
+            var item = new SpecialOffer
             {
-                _dbContext.Add(nameOfFood);
+                Id = Guid.NewGuid(),
+                NameOfFood = nameOfFood
+            };
+
+            if (item.Id != null || item.Id != null)
+            {
+                _dbContext.Add(item);
+                await _dbContext.SaveChangesAsync();
             }
             else
             {
                 throw new NotImplementedException();
             }
-            return nameOfFood;
         }
 
-        public SpecialOffer AddNewDrink(SpecialOffer nameOfDrink)
+        public async Task AddNewDrink(string nameOfDrink)
         {
-            if (nameOfDrink.Id != null || nameOfDrink.Id != null)
+            var item = new SpecialOffer
             {
-                _dbContext.Add(nameOfDrink);
+                Id = Guid.NewGuid(),
+                NameOfDrink = nameOfDrink
+            };
+            if (item.Id != null || item.Id != null)
+            {
+                _dbContext.Add(item);
+                await _dbContext.SaveChangesAsync();
             }
             else
             {
                 throw new NotImplementedException();
             }
-            return nameOfDrink;
         }
 
-        public SpecialOffer ChangeDate(SpecialOffer DataOfSpecialOffer)
+        public async Task ChangeDate(int DataOfSpecialOffer)
         {
-            throw new NotImplementedException();
+            var item = new SpecialOffer
+            {
+                Id = Guid.NewGuid(),
+                Data_Of_Special_Offer = DataOfSpecialOffer
+            };
+            await _dbContext.SaveChangesAsync();
         }
 
-        public SpecialOffer ChangePrice(SpecialOffer Price)
+        public async Task ChangePrice(int Price)
         {
-            throw new NotImplementedException();
+            var item = new SpecialOffer
+            {
+                Id = Guid.NewGuid(),
+                Price = Price
+            };
+            await _dbContext.SaveChangesAsync();
         }
 
-        public void DeleteSpecialOffer(Guid Id)
+        public async Task DeleteSpecialOffer(Guid Id)
         {
-            throw new NotImplementedException();
+            var entity = _dbContext.Special_Offers.FirstOrDefault(x => x.Id == Id);
+            if (entity != null)
+                _dbContext.Special_Offers.Remove(entity);
+            await _dbContext.SaveChangesAsync();
         }
     }
 }
