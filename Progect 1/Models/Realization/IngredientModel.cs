@@ -1,4 +1,5 @@
-﻿using Progect_1.Storage;
+﻿using Microsoft.EntityFrameworkCore;
+using Progect_1.Storage;
 using Progect_1.Storage.Entity;
 
 namespace Progect_1.Models
@@ -10,30 +11,29 @@ namespace Progect_1.Models
         {
             _dbContext = exampleContex;
         }
-        public Ingredient AddIngredient(Ingredient ingridient)
+        public async Task AddIngredient(Ingredient ingridient)
         {
+            ingridient.Id = Guid.NewGuid();
             if (ingridient.Id != null || ingridient.Id != null)
             {
                 _dbContext.Add(ingridient);
+                await _dbContext.SaveChangesAsync();
             }
             else
             {
                 throw new NotImplementedException();
             }
-            return ingridient;
         }
 
-        public void DeleteIngredient(Guid Id)
+        public async Task DeleteIngredient(Guid Id)
         {
             var entity = _dbContext.Ingredients.FirstOrDefault(x => x.Id == Id);
             if (entity != null)
                 _dbContext.Ingredients.Remove(entity);
-            _dbContext.SaveChanges();
+            await _dbContext.SaveChangesAsync();
         }
 
-        public List<Ingredient> GetAllIngredients()
-        {
-            throw new NotImplementedException();
-        }
+        public async Task<IList<Ingredient>> GetAllIngredients() => await _dbContext.Ingredients.ToListAsync();
+
     }
 }

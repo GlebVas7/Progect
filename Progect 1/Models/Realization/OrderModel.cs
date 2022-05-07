@@ -10,35 +10,50 @@ namespace Progect_1.Models
         {
             _dbContext = exampleContex;
         }
-        public Order AddNewDish(Order nameOfFood)
+        public async Task AddNewDish(string nameOfFood)
         {
-            if (nameOfFood.Id != null || nameOfFood.Id != null)
+            var item = new Order {
+                Id = Guid.NewGuid(),
+                NameOfFood = nameOfFood
+            };
+            
+            if (item.Id != null || item.Id != null)
             {
-                _dbContext.Add(nameOfFood);
+                _dbContext.Add(item);
+                await _dbContext.SaveChangesAsync();
             }
             else
             {
                 throw new NotImplementedException();
             }
-            return nameOfFood;
+           
         }
 
-        public Order AddNewDrink(Order nameOfDrink)
+        public async Task AddNewDrink(string nameOfDrink)
         {
-            if (nameOfDrink.Id != null || nameOfDrink.Id != null)
+            var item = new Order
             {
-                _dbContext.Add(nameOfDrink);
+                NameOfDrink = nameOfDrink
+            };
+
+            if (item.Id != null || item.Id != null)
+            {
+                _dbContext.Add(item);
+                await _dbContext.SaveChangesAsync();
             }
             else
             {
                 throw new NotImplementedException();
             }
-            return nameOfDrink;
+
         }
 
-        public void DeleteOrder(Guid Id)
+        public async Task DeleteOrder(Guid Id)
         {
-            throw new NotImplementedException();
+            var entity = _dbContext.Orders.FirstOrDefault(x => x.Id == Id);
+            if (entity != null)
+                _dbContext.Orders.Remove(entity);
+            await _dbContext.SaveChangesAsync();
         }
     }
 }

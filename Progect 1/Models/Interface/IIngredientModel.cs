@@ -4,9 +4,9 @@ namespace Progect_1.Models
 {
     public interface IIngredientModel
     {
-        Task DeleteIngredient(int Id);
+        Task DeleteIngredient(Guid Id);
         Task <IList<Ingredient>> GetAllIngredients();
-        Task AddIngredient(int ingridient);
+        Task AddIngredient(Ingredient ingridient);
 
     }
 }

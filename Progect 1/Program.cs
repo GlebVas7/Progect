@@ -10,6 +10,12 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 var connectionString = builder.Configuration.GetConnectionString("DbConnection");
 builder.Services.AddTransient<IPersonModel, PersonModel>();
+builder.Services.AddTransient<ICafe_StaffModel, Cafe_StaffModel>();
+builder.Services.AddTransient<ICreatorModel, CreatorModel>();
+builder.Services.AddTransient<IGeoDatasModel, GeoDatasModel>();
+builder.Services.AddTransient<IIngredientModel, IngredientModel>();
+builder.Services.AddTransient<IOrderModel, OrderModel>();
+builder.Services.AddTransient<ISpecialOfferModel, SpecialOfferModel>();
 builder.Services.AddDbContext<ExampleContex>(param => param.UseSqlServer(connectionString));
 
 
