@@ -1,1 +1,76 @@
 ﻿@model ICollection<Progect_1.Storage.Entity.Person>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Наша команда</title>
+    @await Html.PartialAsync("csspartial" )
+</head>
+<body>
+    <div class="backgr">
+        <div class="container-sotr">
+            <h2 class="heading">Наши сотрудники</h2>
+            <div class="mainpovar dispflex">
+                <div class="card one">
+                    <div class="photopovora">
+                        <img id="photo1" src="/img/chef.jpg" alt="Povar1"></div>
+                    <div class="fio">
+                        <h3 class="namepovar">Виктор Баринов</h3>
+                        <h4 class="position">Шеф-повар</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="dvapovara dispflex">
+                <div class="card two">
+                    <div class="photopovora">
+                        <img id="photo2" src="/img/cook1.jpg" alt="Povar2">
+                    </div>
+                    <div class="fio">
+                        <h3 class="namepovar">Максим Лавров</h3>
+                        <h4 class="position">Су-шеф</h4>
+                    </div>
+                </div>
+                <div class="card three">
+                    <div class="photopovora">
+                        <img id="photo3" src="/img/cook2.jpg" alt="Povar3">
+                    </div>
+                    <div class="fio">
+                        <h3 class="namepovar">Федор Богатырев</h3>
+                        <h4 class="position">Повар</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="tripovora dispflex">
+                <div class="card four">
+                    <div class="photopovora">
+                        <img id="photo4" src="/img/cook3.jpg" alt="Povar4">
+                    </div>
+                    <div class="fio">
+                        <h3 class="namepovar">Сергей Лавыгин </h3>
+                        <h4 class="position">Кондитер</h4>
+                    </div>
+                </div>
+                <div class="card five">
+                    <div class="photopovora">
+                        <img id="photo5" src="/img/barman.jpg" alt="Barman">
+                    </div>
+                    <div class="fio">
+                        <h3  class="namepovar">Павел Анисимов</h3>
+                        <h4 class="position">Бармен</h4>
+                    </div>
+                </div>
+                <div class="card six">
+                    <div class="photopovora">
+                        <img id="photo6" src="/img/admin.jpg" alt="Admin">
+                    </div>
+                    <div class="fio">
+                        <h3 class="namepovar">Виктория Гончарова</h3>
+                        <h4 class="position">Администратор</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
