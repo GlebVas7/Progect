@@ -18,7 +18,7 @@ namespace Progect_1.Models
                 NameOfFood = nameOfFood
             };
 
-            if (item.Id != null || item.Id != null)
+            if (item.Id != null)
             {
                 _dbContext.Add(item);
                 await _dbContext.SaveChangesAsync();
@@ -36,7 +36,7 @@ namespace Progect_1.Models
                 Id = Guid.NewGuid(),
                 NameOfDrink = nameOfDrink
             };
-            if (item.Id != null || item.Id != null)
+            if (item.Id != null)
             {
                 _dbContext.Add(item);
                 await _dbContext.SaveChangesAsync();

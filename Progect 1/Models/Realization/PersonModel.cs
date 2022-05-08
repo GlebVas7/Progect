@@ -14,7 +14,7 @@ namespace Progect_1.Models
         public async Task CreatePerson(Person person)
         {
             person.Id = Guid.NewGuid();
-            if (person.Id != null || person.Id != null)
+            if (person.Id != null)
             {
                 _dbContext.Add(person);
                 await _dbContext.SaveChangesAsync();

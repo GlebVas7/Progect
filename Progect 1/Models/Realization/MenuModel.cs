@@ -7,19 +7,33 @@ namespace Progect_1.Models.Realization
 {
     public class MenuModel : IMenuModel
     {
-        public Task AddData(Menu menu)
+        private ExampleContex _dbContext;
+        public MenuModel(ExampleContex exampleContex)
         {
-            throw new NotImplementedException();
+            _dbContext = exampleContex;
+        }
+        public async Task AddData(Menu menu)
+        {
+            menu.Id = Guid.NewGuid();
+            if (menu.Id != null)
+            {
+                _dbContext.Add(menu);
+                await _dbContext.SaveChangesAsync();
+            }
+            else
+            {
+                throw new NotImplementedException();
+            }
         }
 
-        public Task DeleteData(Guid id)
+        public async Task DeleteData(Guid id)
         {
-            throw new NotImplementedException();
+            var entity = _dbContext.Menus.FirstOrDefault(x => x.Id == id);
+            if (entity != null)
+                _dbContext.Menus.Remove(entity);
+            await _dbContext.SaveChangesAsync();
         }
 
-        public Task<IList<Menu>> OutputData()
-        {
-            throw new NotImplementedException();
-        }
+        public async Task<IList<Menu>> OutputData() => await _dbContext.Menus.ToListAsync();
     }
 }

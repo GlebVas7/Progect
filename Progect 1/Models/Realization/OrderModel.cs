@@ -17,7 +17,7 @@ namespace Progect_1.Models
                 NameOfFood = nameOfFood
             };
             
-            if (item.Id != null || item.Id != null)
+            if (item.Id != null)
             {
                 _dbContext.Add(item);
                 await _dbContext.SaveChangesAsync();
@@ -36,7 +36,7 @@ namespace Progect_1.Models
                 NameOfDrink = nameOfDrink
             };
 
-            if (item.Id != null || item.Id != null)
+            if (item.Id != null)
             {
                 _dbContext.Add(item);
                 await _dbContext.SaveChangesAsync();
@@ -45,7 +45,6 @@ namespace Progect_1.Models
             {
                 throw new NotImplementedException();
             }
-
         }
 
         public async Task DeleteOrder(Guid Id)

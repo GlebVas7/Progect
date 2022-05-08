@@ -14,7 +14,7 @@ namespace Progect_1.Models
         public async Task AddIngredient(Ingredient ingridient)
         {
             ingridient.Id = Guid.NewGuid();
-            if (ingridient.Id != null || ingridient.Id != null)
+            if (ingridient.Id != null)
             {
                 _dbContext.Add(ingridient);
                 await _dbContext.SaveChangesAsync();
