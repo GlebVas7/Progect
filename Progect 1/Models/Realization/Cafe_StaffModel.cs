@@ -20,7 +20,9 @@ namespace Progect_1.Models
                 await _dbContext.SaveChangesAsync();
             }
             else
+            {
                 throw new NotImplementedException();
+            }
             
         }
 

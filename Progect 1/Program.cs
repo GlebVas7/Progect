@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Progect_1.Models;
+using Progect_1.Models.Interface;
+using Progect_1.Models.Realization;
 using Progect_1.Storage;
 using System.Configuration;
 //using System.Configuration;
@@ -15,8 +17,10 @@ builder.Services.AddTransient<ICreatorModel, CreatorModel>();
 builder.Services.AddTransient<IGeoDatasModel, GeoDatasModel>();
 builder.Services.AddTransient<IIngredientModel, IngredientModel>();
 builder.Services.AddTransient<IOrderModel, OrderModel>();
+builder.Services.AddTransient<IReviewModel, ReviewModel>();
+builder.Services.AddTransient<IMenuModel, MenuModel>();
 builder.Services.AddTransient<ISpecialOfferModel, SpecialOfferModel>();
-builder.Services.AddDbContext<ExampleContex>(param => param.UseSqlServer(connectionString));
+builder.Services.AddDbContext<ExampleContex>();
 
 
 var app = builder.Build();
