@@ -18,7 +18,12 @@ namespace Progect_1.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Menu()
+        {
+            return View();
+        }
+
+        public IActionResult staff()
         {
             return View();
         }
