@@ -14,7 +14,7 @@ namespace Progect_1.Models
         public async Task AddGeo(GeoDatas geoDatas)
         {
             geoDatas.Id = Guid.NewGuid();
-            if (geoDatas.Id != null)
+            if (geoDatas.City != null)
             {
                 _dbContext.Add(geoDatas);
                 await _dbContext.SaveChangesAsync();

@@ -11,6 +11,11 @@ namespace Progect_1.Controllers
         {
             _manager = manager;
         }
+        public async Task<IActionResult> Index()
+        {
+            var creator = await _manager.getAllCreator();
+            return View(creator);
+        }
         [HttpGet]
         [Route("creator")]
         public async Task<IList<Creator>> GetAll() => await _manager.getAllCreator();

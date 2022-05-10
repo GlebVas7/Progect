@@ -11,6 +11,11 @@ namespace Progect_1.Controllers
         {
             _manager = manager;
         }
+        public async Task<IActionResult> Index()
+        {
+            var cafe_staff = await _manager.getAllStaff();
+            return View(cafe_staff);
+        }
         [HttpGet]
         [Route("cafe_staff")]
         public async Task<IList<Cafe_Staff>> GetAll() => await _manager.getAllStaff();

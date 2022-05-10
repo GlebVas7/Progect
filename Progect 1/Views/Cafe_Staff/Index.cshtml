@@ -1,0 +1,11 @@
+﻿@model IList<Progect_1.Storage.Entity.Cafe_Staff> 
+<table>
+@foreach(var cafe_staff in Model)
+    {
+        <tr>
+            <td>@cafe_staff.Name</td>
+            <td>@cafe_staff.Lastname</td>
+            <td>@cafe_staff.Profession</td>
+        </tr>
+    }
+</table>

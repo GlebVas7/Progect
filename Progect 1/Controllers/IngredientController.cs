@@ -12,6 +12,11 @@ namespace Progect_1.Controllers
         {
             _manager = manager;
         }
+        public async Task<IActionResult> Index()
+        {
+            var ingridient = await _manager.GetAllIngredients();
+            return View(ingridient);
+        }
         [HttpGet]
         [Route("ingridient")]
         public async Task<IList<Ingredient>> GetAll() => await _manager.GetAllIngredients();

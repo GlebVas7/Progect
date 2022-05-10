@@ -128,6 +128,9 @@ namespace Progect_1.Migrations
                     b.Property<int>("Grams")
                         .HasColumnType("int");
 
+                    b.Property<int>("Liters")
+                        .HasColumnType("int");
+
                     b.Property<string>("NameOfDrink")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -151,22 +154,15 @@ namespace Progect_1.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("NameOfDrink")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("NameOfFood")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<Guid>("PersonId")
-                        .HasColumnType("uniqueidentifier");
 
                     b.Property<int>("Price_Of_Order")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("PersonId");
 
                     b.ToTable("Orders");
                 });
@@ -240,17 +236,6 @@ namespace Progect_1.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Special_Offers");
-                });
-
-            modelBuilder.Entity("Progect_1.Storage.Entity.Order", b =>
-                {
-                    b.HasOne("Progect_1.Storage.Entity.Person", "Person")
-                        .WithMany()
-                        .HasForeignKey("PersonId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Person");
                 });
 
             modelBuilder.Entity("Progect_1.Storage.Entity.Review", b =>

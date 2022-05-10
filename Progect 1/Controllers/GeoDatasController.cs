@@ -11,6 +11,11 @@ namespace Progect_1.Controllers
         {
             _manager = manager;
         }
+        public async Task<IActionResult> Index()
+        {
+            var geoData = await _manager.GetAllGeoDatas();
+            return View(geoData);
+        }
         [HttpGet]
         [Route("geoData")]
         public async Task<IList<GeoDatas>> GetAll() => await _manager.GetAllGeoDatas();

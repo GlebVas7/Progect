@@ -12,6 +12,11 @@ namespace Progect_1.Controllers
         {
             _manager = manager;
         }
+        public async Task<IActionResult> Index()
+        {
+            var menu = await _manager.OutputData();
+            return View(menu);
+        }
         [HttpGet]
         [Route("menu")]
         public async Task<IList<Menu>> GetAll() => await _manager.OutputData();

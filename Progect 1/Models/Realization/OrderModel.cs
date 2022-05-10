@@ -6,46 +6,30 @@ namespace Progect_1.Models
     public class OrderModel : IOrderModel
     {
         private ExampleContex _dbContext;
+        private bool flag = false;
         public OrderModel(ExampleContex exampleContex)
         {
             _dbContext = exampleContex;
         }
-        public async Task AddNewDish(string nameOfFood)
+        public async Task AddNewOrder(Order order)
         {
-            var item = new Order {
-                Id = Guid.NewGuid(),
-                NameOfFood = nameOfFood
-            };
             
-            if (item.Id != null)
-            {
-                _dbContext.Add(item);
-                await _dbContext.SaveChangesAsync();
-            }
-            else
-            {
-                throw new NotImplementedException();
-            }
-           
+                order.Id = Guid.NewGuid();
+                if (order.Id != null)
+                {
+                    _dbContext.Add(order);
+                    await _dbContext.SaveChangesAsync();
+                }
+                else
+                {
+                    throw new NotImplementedException();
+                }
+                
+                
+ 
         }
 
-        public async Task AddNewDrink(string nameOfDrink)
-        {
-            var item = new Order
-            {
-                NameOfDrink = nameOfDrink
-            };
-
-            if (item.Id != null)
-            {
-                _dbContext.Add(item);
-                await _dbContext.SaveChangesAsync();
-            }
-            else
-            {
-                throw new NotImplementedException();
-            }
-        }
+       
 
         public async Task DeleteOrder(Guid Id)
         {

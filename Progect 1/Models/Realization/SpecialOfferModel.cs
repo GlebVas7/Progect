@@ -14,7 +14,6 @@ namespace Progect_1.Models
         {
             var item = new SpecialOffer
             {
-                Id = Guid.NewGuid(),
                 NameOfFood = nameOfFood
             };
 
@@ -33,7 +32,6 @@ namespace Progect_1.Models
         {
             var item = new SpecialOffer
             {
-                Id = Guid.NewGuid(),
                 NameOfDrink = nameOfDrink
             };
             if (item.Id != null)
@@ -51,7 +49,6 @@ namespace Progect_1.Models
         {
             var item = new SpecialOffer
             {
-                Id = Guid.NewGuid(),
                 Data_Of_Special_Offer = DataOfSpecialOffer
             };
             await _dbContext.SaveChangesAsync();
@@ -61,7 +58,6 @@ namespace Progect_1.Models
         {
             var item = new SpecialOffer
             {
-                Id = Guid.NewGuid(),
                 Price = Price
             };
             await _dbContext.SaveChangesAsync();
