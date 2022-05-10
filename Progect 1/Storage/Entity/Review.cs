@@ -7,7 +7,7 @@ namespace Progect_1.Storage.Entity
     {
         [Key]
         public Guid Id { get; set; }
-        public string Reviews { get; set; }
+        public string? Reviews { get; set; }
         [Required]
         public Guid PersonId { get; set; }
 

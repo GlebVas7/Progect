@@ -6,9 +6,9 @@ namespace Progect_1.Storage.Entity
     {
         [Key]
         public Guid Id { get; set; }
-        public string Name { get; set; }
-        public string Lastname { get; set; }
-        public string  Sex { get; set; }
-        public string Link { get; set; }
+        public string? Name { get; set; }
+        public string? Lastname { get; set; }
+        public string?  Sex { get; set; }
+        public string? Link { get; set; }
     }
 }

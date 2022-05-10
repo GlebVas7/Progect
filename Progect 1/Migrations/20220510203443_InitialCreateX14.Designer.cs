@@ -12,8 +12,8 @@ using Progect_1.Storage;
 namespace Progect_1.Migrations
 {
     [DbContext(typeof(ExampleContex))]
-    [Migration("20220510201822_InitialCreateX10")]
-    partial class InitialCreateX10
+    [Migration("20220510203443_InitialCreateX14")]
+    partial class InitialCreateX14
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -72,23 +72,6 @@ namespace Progect_1.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Creators");
-                });
-
-            modelBuilder.Entity("Progect_1.Storage.Entity.Drink", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<string>("NameOfDrink")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Drinks");
                 });
 
             modelBuilder.Entity("Progect_1.Storage.Entity.GeoDatas", b =>
