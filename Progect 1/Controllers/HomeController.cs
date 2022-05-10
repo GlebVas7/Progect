@@ -23,6 +23,11 @@ namespace Progect_1.Controllers
             return View();
         }
 
+        public IActionResult Ihdex()
+        {
+            return View();
+        }
+
         public IActionResult staff()
         {
             return View();
