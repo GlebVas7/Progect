@@ -19,7 +19,7 @@ builder.Services.AddTransient<IIngredientModel, IngredientModel>();
 builder.Services.AddTransient<IOrderModel, OrderModel>();
 builder.Services.AddTransient<IReviewModel, ReviewModel>();
 builder.Services.AddTransient<IMenuModel, MenuModel>();
-builder.Services.AddTransient<ISpecialOfferModel, SpecialOfferModel>();
+//builder.Services.AddTransient<ISpecialOfferModel, SpecialOfferModel>();
 builder.Services.AddDbContext<ExampleContex>();
 
 
