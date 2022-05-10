@@ -10,6 +10,6 @@ namespace Progect_1.Storage.Entity
         public string Name { get; set; }
         public string LastName { get; set; }
         public string Pass { get; set; }
-        public int Phone_Number { get; set; }
+        public string Phone_Number { get; set; }
     }
 }

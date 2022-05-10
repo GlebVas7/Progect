@@ -8,7 +8,6 @@ namespace Progect_1.Storage.Entity
         [Key]
         public Guid Id { get; set; }
         public string NameOfFood { get; set; }
-        public string NameOfDrink { get; set; }
         public int Grams { get; set; }
         public int Liters { get; set; }
         public int Price { get; set; }

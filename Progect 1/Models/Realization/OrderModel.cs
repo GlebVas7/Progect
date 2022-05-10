@@ -24,9 +24,6 @@ namespace Progect_1.Models
                 {
                     throw new NotImplementedException();
                 }
-                
-                
- 
         }
 
        
