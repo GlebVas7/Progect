@@ -1,4 +1,6 @@
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Builder;
 using Progect_1.Models;
 using Progect_1.Models.Interface;
 using Progect_1.Models.Realization;
@@ -19,11 +21,17 @@ builder.Services.AddTransient<IIngredientModel, IngredientModel>();
 builder.Services.AddTransient<IOrderModel, OrderModel>();
 builder.Services.AddTransient<IReviewModel, ReviewModel>();
 builder.Services.AddTransient<IMenuModel, MenuModel>();
-//builder.Services.AddTransient<ISpecialOfferModel, SpecialOfferModel>();
 builder.Services.AddDbContext<ExampleContex>();
 
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(options => //CookieAuthenticationOptions
+    {
+        options.LoginPath = new Microsoft.AspNetCore.Http.PathString("/Account/Login");
+    });
+builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -39,6 +47,7 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
+app.UseAuthentication();
 
 app.MapControllerRoute(
     name: "default",
