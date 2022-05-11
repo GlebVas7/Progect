@@ -24,7 +24,7 @@ namespace Progect_1.Controllers
         [Route("geoData")]
         public Task Create([FromBody] GeoDatas geoData) => _manager.AddGeo(geoData);
 
-        [HttpDelete] //не уверена,что удаление правильно реализовано(в тех контроллерах,где оно есть)
+        [HttpDelete] 
         [Route("geoData/{Id}")]
         public Task Delete([FromBody] Guid Id) => _manager.DeleteGeo(Id);
     }

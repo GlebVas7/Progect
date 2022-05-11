@@ -11,11 +11,6 @@ namespace Progect_1.Controllers
         {
             _manager = manager;
         }
-        /*public async Task<IActionResult> Index()
-        {
-         
-            return View(order);
-        }*/
         [HttpPut]
         [Route("order")]
         public Task Create([FromBody] Order order) => _manager.AddNewOrder(order);

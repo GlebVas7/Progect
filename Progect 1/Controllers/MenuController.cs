@@ -25,13 +25,17 @@ namespace Progect_1.Controllers
         [Route("menu")]
         public Task Create([FromBody] Menu menu) => _manager.AddData(menu);
 
-        [HttpDelete] //не уверена,что удаление правильно реализовано(в тех контроллерах,где оно есть)
+        [HttpDelete] 
         [Route("menu/{id}")]
         public Task Delete([FromBody] int id) => _manager.DeleteData(id);
-        // public Task Delete([FromBody] Guid id) => _manager.DeleteData(id);
         public IActionResult AddDish(int id)
         {
-            var menu = _manager.FindData(id);
+            var menu = _manager.FindFood(id);
+            return View(menu);
+        }
+        public IActionResult AddDrink(int id)
+        {
+            var menu = _manager.FindDrink(id);
             return View(menu);
         }
     }

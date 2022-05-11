@@ -25,7 +25,7 @@ namespace Progect_1.Controllers
         [Route("ingridient")]
         public Task Create([FromBody] Ingredient ingridient) => _manager.AddIngredient(ingridient);
 
-        [HttpDelete] //не уверена,что удаление правильно реализовано(в тех контроллерах,где оно есть)
+        [HttpDelete] 
         [Route("ingridient/{Id}")]
         public Task Delete([FromBody] Guid Id) => _manager.DeleteIngredient(Id);
     }
