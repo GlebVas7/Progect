@@ -1,11 +1,10 @@
 ﻿using Progect_1.Storage.Entity;
-
 namespace Progect_1.Models.Interface
 {
-    public interface IMenuModel
+    public interface IDrinkModel
     {
-        Task AddData(Menu menu);
+        Task AddData(Drink drink);
         Task DeleteData(int id);
-        Task<IList<Menu>> OutputData();
+        Task<IList<Drink>> OutputData();
     }
 }
