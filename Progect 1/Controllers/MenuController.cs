@@ -27,6 +27,6 @@ namespace Progect_1.Controllers
 
         [HttpDelete] //не уверена,что удаление правильно реализовано(в тех контроллерах,где оно есть)
         [Route("menu/{id}")]
-        public Task Delete([FromBody] Guid id) => _manager.DeleteData(id);
+        public Task Delete([FromBody] int id) => _manager.DeleteData(id);
     }
 }
