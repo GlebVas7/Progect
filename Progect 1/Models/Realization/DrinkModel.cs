@@ -2,22 +2,21 @@
 using Progect_1.Models.Interface;
 using Progect_1.Storage;
 using Progect_1.Storage.Entity;
-
-namespace Progect_1.Models.Realization
+namespace Progect_1.Models
 {
-    public class MenuModel : IMenuModel
+    public class DrinkModel : IDrinkModel
     {
         private ExampleContex _dbContext;
-        public MenuModel(ExampleContex exampleContex)
+        public DrinkModel(ExampleContex exampleContex)
         {
             _dbContext = exampleContex;
         }
-        public async Task AddData(Menu menu)
+        public async Task AddData(Drink drink)
         {
-            menu.Id = new int();
-            if (menu.Id != null)
+            drink.Id = new int();
+            if (drink.Id != null)
             {
-                _dbContext.Add(menu);
+                _dbContext.Add(drink);
                 await _dbContext.SaveChangesAsync();
             }
             else
@@ -28,12 +27,12 @@ namespace Progect_1.Models.Realization
 
         public async Task DeleteData(int id)
         {
-            var entity = _dbContext.Menus.FirstOrDefault(x => x.Id == id);
+            var entity = _dbContext.Drinks.FirstOrDefault(x => x.Id == id);
             if (entity != null)
-                _dbContext.Menus.Remove(entity);
+                _dbContext.Drinks.Remove(entity);
             await _dbContext.SaveChangesAsync();
         }
 
-        public async Task<IList<Menu>> OutputData() => await _dbContext.Menus.ToListAsync();
+        public async Task<IList<Drink>> OutputData() => await _dbContext.Drinks.ToListAsync();
     }
 }
