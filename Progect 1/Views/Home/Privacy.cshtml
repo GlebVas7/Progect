@@ -13,20 +13,20 @@
             <form asp-action="AddDish" asp-controller="Menu">
             <input type="number" class="card-numberofdish" placeholder="Введите номер блюда">
             </form>
-            <form asp-action="AddDrink" asp-controller="Drink">
-            <input type="number" class="card-numberofdrink" placeholder="Введиие номер напитка">
+            <form asp-action="AddDrink" asp-controller="Menu">
+            <input type="number" class="card-numberofdrink" placeholder="Введите номер напитка">
              </form>
-            <input type="submit" value="Рассчитать">
-        <input type="number" value="950" readonly class="cost1">
-        <input type="number" value="150" readonly class="cost2">
+             </div>
+    <div class="card">
+            <input type="button" name="submit" value="Рассчитать">
+              </div>
+        <input type="hidden" value="950" readonly class="cost1">
+        <input type="hidden" value="150" readonly class="cost2">
         <form asp-action="totalmenu">
             <input type="text" class="card-totalcost" readonly>
-            <input type="submit" value="Заказать">
+            <input type="button" name="submit" value="Заказать">
         </form>
-
-    </div>
-
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
