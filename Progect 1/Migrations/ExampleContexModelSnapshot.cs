@@ -126,14 +126,13 @@ namespace Progect_1.Migrations
 
             modelBuilder.Entity("Progect_1.Storage.Entity.Menu", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<int>("Grams")
                         .HasColumnType("int");
 
-                    b.Property<int>("Liters")
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("Grams")
                         .HasColumnType("int");
 
                     b.Property<string>("NameOfFood")
