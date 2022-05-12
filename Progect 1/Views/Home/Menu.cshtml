@@ -1,13 +1,339 @@
-﻿<section class="menu_m">
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>menu</title>
+    @await Html.PartialAsync("csspartial" )
+</head>
+
+
+<body>
+    <div class="menu_m">
       <div class="heading_m">
          <h3>&mdash; МЕНЮ &mdash;</h3>
       </div>
-      <div class="food-items">
-         <img src="img/miso-ramen-pork.jpg">
-         <div class="details">
-            <div class="details-sub">
-               <h5></h5>
+
+      <!-- soup -->
+      <h2>Супы</h2>
+      <div class="soup">
+         <div class="food-items">
+            <img src="~/img/miso-ramen-pork.jpg">
+            <div class="details">
+               <div class="details-sub">
+                  <h5>название1</h5>
+                  <h5 class="price">price1</h5>
+                  <h5 class="massa">гр1</h5>
+               </div>
+               <p>description1</p>
+            </div>
+         </div>
+
+         <div class="food-items">
+            <img src="~/img/miso-shrimp.jpg">
+            <div class="details">
+               <div class="details-sub">
+                  <h5>название2</h5>
+                  <h5 class="price">price2</h5>
+                  <h5 class="massa">гр2</h5>
+               </div>
+               <p>description2</p>
+            </div>
+         </div>
+
+         <div class="food-items">
+            <img src="~/img/miso-tofu-seaweed.jpg">
+            <div class="details">
+               <div class="details-sub">
+                  <h5>название3</h5>
+                  <h5 class="price">price3</h5>
+                  <h5 class="massa">гр3</h5>
+               </div>
+               <p>description3</p>
+            </div>
+         </div>
+
+         <div class="food-items">
+            <img src="~/img/ramen1.jpg">
+            <div class="details">
+               <div class="details-sub">
+                  <h5>название4</h5>
+                  <h5 class="price">price4</h5>
+                  <h5 class="massa">гр4</h5>
+               </div>
+               <p>description4</p>
+            </div>
+         </div>
+
+         <div class="food-items">
+            <img src="~/img/ramen2.jpg">
+            <div class="details">
+               <div class="details-sub">
+                  <h5>название5</h5>
+                  <h5 class="price">price5</h5>
+                  <h5 class="massa">гр5</h5>
+               </div>
+               <p>description5</p>
+            </div>
+         </div>
+
+         <div class="food-items">
+            <img src="~/img/ramen-tankatsu-chicken.jpg">
+            <div class="details">
+               <div class="details-sub">
+                  <h5>название6</h5>
+                  <h5 class="price">price6</h5>
+                  <h5 class="massa">гр6</h5>
+               </div>
+               <p>description6</p>
             </div>
          </div>
       </div>
-   </section>
+
+      <!-- gedza -->
+      <h2>Гёдза</h2>
+      <div class="gedza">
+         <div class="food-items">
+            <img src="~/img/gyoza-pork.jpg">
+            <div class="details">
+               <div class="details-sub">
+                  <h5>название7</h5>
+                  <h5 class="price">price7</h5>
+                  <h5 class="massa">гр7</h5>
+               </div>
+               <p>description7</p>
+            </div>
+         </div>
+
+         <div class="food-items">
+            <img src="~/img/gyoza-seafood.jpeg">
+            <div class="details">
+               <div class="details-sub">
+                  <h5>название8</h5>
+                  <h5 class="price">price8</h5>
+                  <h5 class="massa">гр8</h5>
+               </div>
+               <p>description8</p>
+            </div>
+         </div>
+
+         <div class="food-items">
+            <img src="~/img/gyoza-shrimp.jpg">
+            <div class="details">
+               <div class="details-sub">
+                  <h5>название9</h5>
+                  <h5 class="price">price9</h5>
+                  <h5 class="massa">гр9</h5>
+               </div>
+               <p>description9</p>
+            </div>
+         </div>
+
+         <div class="food-items">
+            <img src="~/img/gyoza-vegtables.jpg">
+            <div class="details">
+               <div class="details-sub">
+                  <h5>название10</h5>
+                  <h5 class="price">price10</h5>
+                  <h5 class="massa">гр10</h5>
+               </div>
+               <p>description10</p>
+            </div>
+         </div>
+      </div>
+
+      <!-- gunkan -->
+      <h2>Гунканы</h2>
+      <div class="gunkan">
+         <div class="food-items">
+            <img src="~/img/gunkan1.jpg">
+            <div class="details">
+               <div class="details-sub">
+                  <h5>название11</h5>
+                  <h5 class="price">price11</h5>
+                  <h5 class="massa">гр11</h5>
+               </div>
+               <p>description11</p>
+            </div>
+         </div>
+
+         <div class="food-items">
+            <img src="~/img/gunkan-2.jpg">
+            <div class="details">
+               <div class="details-sub">
+                  <h5>название12</h5>
+                  <h5 class="price">price12</h5>
+                  <h5 class="massa">гр12</h5>
+               </div>
+               <p>description12</p>
+            </div>
+         </div>
+
+         <div class="food-items">
+            <img src="~/img/gunkan-crab.jpg">
+            <div class="details">
+               <div class="details-sub">
+                  <h5>название13</h5>
+                  <h5 class="price">price13</h5>
+                  <h5 class="massa">гр13</h5>
+               </div>
+               <p>description13</p>
+            </div>
+         </div>
+
+         <div class="food-items">
+            <img src="~/img/gunkan-seaweed.jpg">
+            <div class="details">
+               <div class="details-sub">
+                  <h5>название14</h5>
+                  <h5 class="price">price14</h5>
+                  <h5 class="massa">гр14</h5>
+               </div>
+               <p>description14</p>
+            </div>
+         </div>
+
+         <div class="food-items">
+            <img src="~/img/gunkan-shimji-mushrooms.jpg">
+            <div class="details">
+               <div class="details-sub">
+                  <h5>название15</h5>
+                  <h5 class="price">price15</h5>
+                  <h5 class="massa">гр15</h5>
+               </div>
+               <p>description15</p>
+            </div>
+         </div>
+      </div>
+
+      <!-- rolls -->
+      <h2>Роллы</h2>
+      <div class="rolls">
+         <div class="food-items">
+            <img src="~/img/rolls1.jpg">
+            <div class="details">
+               <div class="details-sub">
+                  <h5>название16</h5>
+                  <h5 class="price">price16</h5>
+                  <h5 class="massa">гр16</h5>
+               </div>
+               <p>description16</p>
+            </div>
+         </div>
+
+         <div class="food-items">
+            <img src="~/img/rolls2.jpg">
+            <div class="details">
+               <div class="details-sub">
+                  <h5>название17</h5>
+                  <h5 class="price">price17</h5>
+                  <h5 class="massa">г17</h5>
+               </div>
+               <p>description17</p>
+            </div>
+         </div>
+
+         <div class="food-items">
+            <img src="~/img/rolls3.jpg">
+            <div class="details">
+               <div class="details-sub">
+                  <h5>название18</h5>
+                  <h5 class="price">price18</h5>
+                  <h5 class="massa">гр18</h5>
+               </div>
+               <p>description18</p>
+            </div>
+         </div>
+
+         <div class="food-items">
+            <img src="~/img/rolls4.jpg">
+            <div class="details">
+               <div class="details-sub">
+                  <h5>название19</h5>
+                  <h5 class="price">price19</h5>
+                  <h5 class="massa">гр19</h5>
+               </div>
+               <p>description19</p>
+            </div>
+         </div>
+
+         <div class="food-items">
+            <img src="~/img/rolls5.jpg">
+            <div class="details">
+               <div class="details-sub">
+                  <h5>название20</h5>
+                  <h5 class="price">price20</h5>
+                  <h5 class="massa">гр20</h5>
+               </div>
+               <p>description20</p>
+            </div>
+         </div>
+
+         <div class="food-items">
+            <img src="~/img/rolls6.jpg">
+            <div class="details">
+               <div class="details-sub">
+                  <h5>название21</h5>
+                  <h5 class="price">price21</h5>
+                  <h5 class="massa">гр21</h5>
+               </div>
+               <p>description21</p>
+            </div>
+         </div>
+      </div>
+
+      <!-- desserts -->
+      <h2>Десерты</h2>
+      <div class="desserts">
+         <div class="food-items">
+            <img src="~/img/mochi.jpg">
+            <div class="details">
+               <div class="details-sub">
+                  <h5>название22</h5>
+                  <h5 class="price">price22</h5>
+                  <h5 class="massa">гр22</h5>
+               </div>
+               <p>description22</p>
+            </div>
+         </div>
+
+         <div class="food-items">
+            <img src="~/img/тайяки.jpg">
+            <div class="details">
+               <div class="details-sub">
+                  <h5>название23</h5>
+                  <h5 class="price">price23</h5>
+                  <h5 class="massa">гр23</h5>
+               </div>
+               <p>description23</p>
+            </div>
+         </div>
+
+         <div class="food-items">
+            <img src="~/img/dango.jpg">
+            <div class="details">
+               <div class="details-sub">
+                  <h5>название24</h5>
+                  <h5 class="price">price24</h5>
+                  <h5 class="massa">гр24</h5>
+               </div>
+               <p>description24</p>
+            </div>
+         </div>
+
+         <div class="food-items">
+            <img src="~/img/namagashi.jpg">
+            <div class="details">
+               <div class="details-sub">
+                  <h5>название25</h5>
+                  <h5 class="price">price25</h5>
+                  <h5 class="massa">гр25</h5>
+               </div>
+               <p>description25</p>
+            </div>
+         </div>
+      </div>
+
+   </div>
+</body>
+</html>
