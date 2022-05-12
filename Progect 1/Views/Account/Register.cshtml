@@ -11,14 +11,19 @@
             <span asp-validation-for="Name" />
         </div>
         <div>
+            <label asp-for="Lastname">Введите Lastname</label><br />
+            <input type="text" asp-for="Lastname" />
+            <span asp-validation-for="Lastname" />
+        </div>
+        <div>
             <label asp-for="Password">Введите пароль</label><br />
             <input asp-for="Password" />
             <span asp-validation-for="Password" />
         </div>
         <div>
-            <label asp-for="ConfirmPassword">Nomber of phone</label><br />
-            <input asp-for="ConfirmPassword" />
-            <span asp-validation-for="ConfirmPassword" />
+            <label asp-for="NumberOfPhone">Nomber of phone</label><br />
+            <input asp-for="NumberOfPhone" />
+            <span asp-validation-for="NumberOfPhone" />
         </div>
         <div>
             <input type="submit" value="Регистрация" />

@@ -10,6 +10,6 @@ namespace Progect_1.Models
         Task DeletePerson(Guid id);
         Task<Person> FindUserByNamePasswordAsync(string name, string password);
         Task<Person> FindUserByNameAsync(string name);
-        Task AddUserToDataBase(string name, string password, string confirmPassword);
+        Task AddUserToDataBase(string name, string password,string lastname, string confirmPassword);
     }
 }

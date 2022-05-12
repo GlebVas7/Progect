@@ -4,15 +4,18 @@ namespace Progect_1.Storage.Entity.AuthorizeView
 {
     public class RegisterModel
     {
-        [Required(ErrorMessage = "Username required!")]
+        [Required(ErrorMessage = "Такое имя уже существует!")]
         public string Name { get; set; }
 
-        [Required(ErrorMessage = "Password required!")]
+        [Required(ErrorMessage = "Ошибка!")]
+        public string? Lastname { get; set; }
+
+        [Required(ErrorMessage = "Ошибка пароля!")]
         [DataType(DataType.Password)]
         public string Password { get; set; }
 
-        [DataType(DataType.Password)]
-        [Compare("Password", ErrorMessage = "Passwords don't match!")]
-        public string ConfirmPassword { get; set; }
+
+        [Required(ErrorMessage = "Неверный номер телефона!")]
+        public string? NumberOfPhone { get; set; }
     }
 }

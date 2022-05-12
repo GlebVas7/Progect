@@ -63,7 +63,7 @@ namespace Progect_1.Controllers
 
 
                     //Добавляем пользователя в бд
-                    await _userManager.AddUserToDataBase(model.Name,  model.Password, model.ConfirmPassword);
+                    await _userManager.AddUserToDataBase(model.Name,  model.Password, model.Lastname, model.NumberOfPhone);
                  
 
                     await Authenticate(model.Name); //Аутентификация

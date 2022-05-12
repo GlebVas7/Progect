@@ -42,12 +42,13 @@ namespace Progect_1.Models
             return await _dbContext.Persons.FirstOrDefaultAsync(u => u.Name == userName);
         }
         public async Task<IList<Person>> getAllPersons() => await _dbContext.Persons.ToListAsync();
-        public async Task AddUserToDataBase(string userName, string userPassword, string phone)
+        public async Task AddUserToDataBase(string userName, string userPassword,string lastname, string phone)
         {
-            _dbContext.Persons.Add(new Person { Id = Guid.NewGuid(), Name = userName, Pass = userPassword, Phone_Number = phone });
+            _dbContext.Persons.Add(new Person { Id = Guid.NewGuid(), Name = userName, Pass = userPassword, LastName = lastname, Phone_Number = phone });
             await _dbContext.SaveChangesAsync();
         }
 
+       
         //public async Task GetPersonById(Guid id)
         //{
         // var person =  _dbContext.Persons.FirstOrDefault(x => x.Id == id);
