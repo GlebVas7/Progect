@@ -724,6 +724,7 @@ h2 {
         .footer .credit span {
             color: var(--peru);
         }
+/* registration window start*/
 
 .modal {
     position: fixed;
@@ -945,6 +946,10 @@ h2 {
     -webkit-transform: translateX(0);
     transform: translateX(0);
 }
+
+
+/*staff page start*/
+
 .container-sotr {
     width: 90%;
     margin: 0 auto;
@@ -1079,7 +1084,7 @@ h2 {
     margin-top: 5px;
 }
 
-.heading {
+.heading1 {
     text-align: center;
     font-family: 'Raleway', sans-serif;
     text-shadow: 3px 3px 1px rgba(205, 148, 82, 0.8);
@@ -1150,6 +1155,7 @@ h2 {
         margin-right: 50px;
     }
 }
+/*staff page ends*/
 
 
 /* media queries  */
