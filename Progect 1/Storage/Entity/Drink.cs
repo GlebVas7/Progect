@@ -7,6 +7,6 @@ namespace Progect_1.Storage.Entity
         [Key]
         public int Id { get; set; }
         public string? Name_Of_Drink { get; set; }
-        public string? Liters { get; set; }
+        public int Liters { get; set; }
     }
 }
