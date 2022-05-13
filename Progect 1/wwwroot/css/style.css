@@ -761,15 +761,15 @@ h2 {
             }
 
     .footer .share {
-        margin: 2rem 0;
+        margin: 1rem 0;
     }
 
         .footer .share a {
             height: 6rem;
             width: 6rem;
             line-height: 5.8rem;
-            color: var(--brown);
-            background: var(--white);
+            color: var(--white);
+            background: var(--brown);
             margin: 0 .3rem;
             font-size: 2.5rem;
         }
