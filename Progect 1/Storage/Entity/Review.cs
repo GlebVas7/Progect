@@ -7,11 +7,8 @@ namespace Progect_1.Storage.Entity
     {
         [Key]
         public Guid Id { get; set; }
+        public string? Name { get; set; }
+        public string? Lastname { get; set; }
         public string? Reviews { get; set; }
-        [Required]
-        public Guid PersonId { get; set; }
-
-        [ForeignKey(nameof(PersonId))]
-        public virtual Person Person { get; set; }
     }
 }

@@ -12,8 +12,8 @@ using Progect_1.Storage;
 namespace Progect_1.Migrations
 {
     [DbContext(typeof(ExampleContex))]
-    [Migration("20220512135413_x8")]
-    partial class x8
+    [Migration("20220512143105_X13")]
+    partial class X13
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -135,6 +135,9 @@ namespace Progect_1.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<int>("Grams")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Liters")
                         .HasColumnType("int");
 
                     b.Property<string>("NameOfFood")

@@ -13,7 +13,6 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 var connectionString = builder.Configuration.GetConnectionString("DbConnection");
-builder.Services.AddTransient<IPersonModel, PersonModel>();
 builder.Services.AddTransient<ICafe_StaffModel, Cafe_StaffModel>();
 builder.Services.AddTransient<ICreatorModel, CreatorModel>();
 builder.Services.AddTransient<IGeoDatasModel, GeoDatasModel>();

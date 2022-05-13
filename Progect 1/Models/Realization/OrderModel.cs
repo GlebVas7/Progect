@@ -26,8 +26,6 @@ namespace Progect_1.Models
                 }
         }
 
-       
-
         public async Task DeleteOrder(Guid Id)
         {
             var entity = _dbContext.Orders.FirstOrDefault(x => x.Id == Id);

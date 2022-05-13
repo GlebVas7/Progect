@@ -4,7 +4,6 @@ namespace Progect_1.Storage
 {
     public class ExampleContex: DbContext
     {
-        public DbSet<Person> Persons { get; set; }
         public DbSet<Creator> Creators { get; set; }
         public DbSet<GeoDatas> geoDatas { get; set; }
         public DbSet<Cafe_Staff> Cafe_Staffs { get; set; }
