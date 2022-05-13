@@ -23,17 +23,9 @@ builder.Services.AddTransient<IReviewModel, ReviewModel>();
 builder.Services.AddTransient<IMenuModel, MenuModel>();
 builder.Services.AddDbContext<ExampleContex>();
 
-builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-    .AddCookie(options => //CookieAuthenticationOptions
-    {
-        options.LoginPath = new Microsoft.AspNetCore.Http.PathString("/Account/Login");
-    });
-builder.Services.AddControllersWithViews();
+
 
 var app = builder.Build();
-
-
-// Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
@@ -41,16 +33,18 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+// Configure the HTTP request pipeline.
+
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
 
 app.UseAuthorization();
-app.UseAuthentication();
 
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
+

@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Progect_1.Models;
 using System.Diagnostics;
 
@@ -14,13 +13,22 @@ namespace Progect_1.Controllers
             _logger = logger;
         }
 
-        [Authorize]
         public IActionResult Index()
         {
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Menu()
+        {
+            return View();
+        }
+
+        public IActionResult Ihdex()
+        {
+            return View();
+        }
+
+        public IActionResult staff()
         {
             return View();
         }
