@@ -124,6 +124,10 @@ section {
     opacity: 1;
 }
 
+.map_l{
+    margin-top: 20px;
+}
+
 
 
 /*location end
@@ -1325,3 +1329,4 @@ h2 {
         font-size: 1rem;
     }
 }
+
