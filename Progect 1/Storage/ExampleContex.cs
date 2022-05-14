@@ -12,7 +12,7 @@ namespace Progect_1.Storage
         public DbSet<Order> Orders { get; set; }
         public DbSet<Review> Reviews { get; set; }
         public DbSet<Drink> Drinks { get; set; }
-        public ExampleContex(DbContextOptions<ExampleContex> options) : base(options)
+        public ExampleContex(/*DbContextOptions<ExampleContex> options*/) /*: base(options)*/
         {
         }
 

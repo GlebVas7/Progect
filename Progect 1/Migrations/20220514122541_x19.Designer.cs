@@ -12,8 +12,8 @@ using Progect_1.Storage;
 namespace Progect_1.Migrations
 {
     [DbContext(typeof(ExampleContex))]
-    [Migration("20220512143105_X13")]
-    partial class X13
+    [Migration("20220514122541_x19")]
+    partial class x19
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -74,6 +74,9 @@ namespace Progect_1.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("Liters")
+                        .HasColumnType("int");
 
                     b.Property<string>("Name_Of_Drink")
                         .HasColumnType("nvarchar(max)");
@@ -137,9 +140,6 @@ namespace Progect_1.Migrations
                     b.Property<int>("Grams")
                         .HasColumnType("int");
 
-                    b.Property<int>("Liters")
-                        .HasColumnType("int");
-
                     b.Property<string>("NameOfFood")
                         .HasColumnType("nvarchar(max)");
 
@@ -171,57 +171,24 @@ namespace Progect_1.Migrations
                     b.ToTable("Orders");
                 });
 
-            modelBuilder.Entity("Progect_1.Storage.Entity.Person", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("LastName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Pass")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Phone_Number")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Persons");
-                });
-
             modelBuilder.Entity("Progect_1.Storage.Entity.Review", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("PersonId")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<string>("Lastname")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Reviews")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("PersonId");
-
                     b.ToTable("Reviews");
-                });
-
-            modelBuilder.Entity("Progect_1.Storage.Entity.Review", b =>
-                {
-                    b.HasOne("Progect_1.Storage.Entity.Person", "Person")
-                        .WithMany()
-                        .HasForeignKey("PersonId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Person");
                 });
 #pragma warning restore 612, 618
         }

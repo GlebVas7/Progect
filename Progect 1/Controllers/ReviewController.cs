@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿/*using Microsoft.AspNetCore.Mvc;
 using Progect_1.Models;
 using Progect_1.Models.Interface;
 using Progect_1.Storage.Entity;
@@ -26,3 +26,4 @@ namespace Progect_1.Controllers
         public Task Create([FromBody] Review review) => _manager.AddComment(review);
     }
 }
+*/

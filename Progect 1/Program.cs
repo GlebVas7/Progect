@@ -18,8 +18,8 @@ builder.Services.AddTransient<ICreatorModel, CreatorModel>();
 builder.Services.AddTransient<IGeoDatasModel, GeoDatasModel>();
 builder.Services.AddTransient<IIngredientModel, IngredientModel>();
 builder.Services.AddTransient<IOrderModel, OrderModel>();
-builder.Services.AddTransient<IReviewModel, ReviewModel>();
-builder.Services.AddTransient<IMenuModel, MenuModel>();
+/*builder.Services.AddTransient<IReviewModel, ReviewModel>();
+*/builder.Services.AddTransient<IMenuModel, MenuModel>();
 builder.Services.AddDbContext<ExampleContex>();
 
 

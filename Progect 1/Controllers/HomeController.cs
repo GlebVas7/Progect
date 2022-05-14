@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Progect_1.Models;
+using Progect_1.Storage;
 using System.Diagnostics;
 
 namespace Progect_1.Controllers
@@ -15,7 +16,11 @@ namespace Progect_1.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            var db = new ExampleContex();
+            var geo = db.geoDatas.ToList();
+            var creator = db.Creators.ToList();
+            var model = new ViewModel { Creators = creator, GeoDatas = geo };
+            return View(model);
         }
 
         public IActionResult Menu()

@@ -1,4 +1,4 @@
-﻿
+﻿@model ViewModel
 @{
     ViewData["Title"] = "Home Page";
 }
@@ -6,6 +6,24 @@
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-   
-    
+    <table>
+    @foreach(var item in Model.GeoDatas)
+    {
+        <tr>
+            <td>@item.City</td>
+            <td>@item.Street</td>
+            <td>@item.HouseNumber</td>
+        </tr>
+    }
+    </table>
+    <table>
+    @foreach(var item in Model.Creators)
+    {
+        <tr>
+            <td>@item.Name</td>
+            <td>@item.Lastname</td>
+            <td>@item.Link</td>
+        </tr>
+    }
+    </table>
 </div>
