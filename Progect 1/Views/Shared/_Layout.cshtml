@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@model ViewModel;
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -39,7 +40,16 @@
    <!-- footer section starts  -->
    @RenderBody()
    <section class="footer">
-
+        @foreach(var item in Model.Creators)
+        {
+            <tabele>
+                <tr>
+                    <td ><p style="color:white">@item.Name</p></td>
+                    <td><p style="color:white">@item.Lastname</p></td>
+                    <td><p style="color:white">@item.Link</p></td>
+                </tr>
+            </tabele>
+        }
 
       <div class="share">
          <a href="http://facebook.com" class="fab fa-facebook-f"></a>
