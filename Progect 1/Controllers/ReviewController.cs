@@ -1,4 +1,4 @@
-﻿/*using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Progect_1.Models;
 using Progect_1.Models.Interface;
 using Progect_1.Storage.Entity;
@@ -12,7 +12,7 @@ namespace Progect_1.Controllers
         {
             _manager = manager;
         }
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Review()
         {
             var review = await _manager.OutputData();
             return View(review);
@@ -23,7 +23,6 @@ namespace Progect_1.Controllers
 
         [HttpPut]
         [Route("review")]
-        public Task Create([FromBody] Review review) => _manager.AddComment(review);
+        public async Task Create([FromBody] Review reviews) => await _manager.AddComment(reviews);
     }
 }
-*/
