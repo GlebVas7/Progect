@@ -7,6 +7,8 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Complete Responsive Food / Restaurant Website Design Tutorial</title>
    @await Html.PartialAsync("csspartial")
+   
+  
 
 </head>
 
@@ -22,7 +24,7 @@
          <a asp-controller="Home" asp-action="Menu">МЕНЮ</a>
          <a href="#КОНТАКТЫ">КОНТАКТЫ</a>
          <a asp-controller="Home" asp-action="staff">СОТРУДНИКИ</a>
-         <a href="#ВХОД" class="login">ВХОД</a>
+         <a asp-controller="Home" asp-action="Review">ОТЗЫВЫ</a>
       </nav>
 
       <div id="menu-btn" class="fas fa-bars"></div>
