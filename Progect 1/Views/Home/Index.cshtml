@@ -498,5 +498,15 @@
           </div>
        </div>
     </div>
-
+    <h3>Сотрудники</h3>
+    @foreach(var item in Model.Creators)
+        {
+            <tabele>
+                <tr>
+                    <td ><p style="color:white">@item.Name</p></td>
+                    <td><p style="color:white">@item.Lastname</p></td>
+                    <td><p style="color:white">@item.Link</p></td>
+                </tr>
+            </tabele>
+        }
 
