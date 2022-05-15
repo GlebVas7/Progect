@@ -1,6 +1,32 @@
-﻿@{
-    ViewData["Title"] = "Privacy Policy";
-}
-<h1>@ViewData["Title"]</h1>
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0s">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
 
-<p>Use this page to detail your site's privacy policy.</p>
+    <div class="card">
+            <form asp-action="AddDish" asp-controller="Menu">
+            <input type="number" class="card-numberofdish" placeholder="Введите номер блюда">
+            </form>
+            <form asp-action="AddDrink" asp-controller="Menu">
+            <input type="number" class="card-numberofdrink" placeholder="Введите номер напитка">
+             </form>
+             </div>
+    <div class="card">
+            <input type="button" name="submit" value="Рассчитать">
+              </div>
+        <input type="hidden" value="950" readonly class="cost1">
+        <input type="hidden" value="150" readonly class="cost2">
+        <form asp-action="totalmenu">
+            <input type="text" class="card-totalcost" readonly>
+            <input type="button" name="submit" value="Заказать">
+        </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

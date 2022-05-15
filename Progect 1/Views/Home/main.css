@@ -1,0 +1,14 @@
+.cost1, .cost2 {
+  visibility: hidden;
+}
+
+.card-totalcost {
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.card-totalcost:focus {
+  border: none;
+}
+/*# sourceMappingURL=main.css.map */
