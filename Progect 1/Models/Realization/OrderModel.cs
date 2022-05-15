@@ -13,17 +13,17 @@ namespace Progect_1.Models
         }
         public async Task AddNewOrder(Order order)
         {
-            
-                order.Id = Guid.NewGuid();
-                if (order.Id != null)
-                {
-                    _dbContext.Add(order);
-                    await _dbContext.SaveChangesAsync();
-                }
-                else
-                {
-                    throw new NotImplementedException();
-                }
+
+            order.Id = Guid.NewGuid();
+            if (order.Id != null)
+            {
+                _dbContext.Add(order);
+                await _dbContext.SaveChangesAsync();
+            }
+            else
+            {
+                throw new NotImplementedException();
+            }
         }
 
         public async Task DeleteOrder(Guid Id)
