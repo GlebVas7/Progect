@@ -6,5 +6,6 @@ namespace Progect_1.Models
     {
         public IEnumerable<Creator> Creators { get; set; }
         public IEnumerable<GeoDatas> GeoDatas { get; set; }
+
     }
 }

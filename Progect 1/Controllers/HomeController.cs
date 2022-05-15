@@ -25,7 +25,12 @@ namespace Progect_1.Controllers
 
         public IActionResult Menu()
         {
-            return View();
+            var db = new ExampleContex();
+            var geo = db.geoDatas.ToList();
+            var creator = db.Creators.ToList();
+            var model = new ViewModel { Creators = creator, GeoDatas = geo };
+            return View(model);
+            
         }
 
         public IActionResult Ihdex()
@@ -35,7 +40,11 @@ namespace Progect_1.Controllers
 
         public IActionResult staff()
         {
-            return View();
+            var db = new ExampleContex();
+            var geo = db.geoDatas.ToList();
+            var creator = db.Creators.ToList();
+            var model = new ViewModel { Creators = creator, GeoDatas = geo };
+            return View(model);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
