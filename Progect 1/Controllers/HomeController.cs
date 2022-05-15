@@ -19,8 +19,15 @@ namespace Progect_1.Controllers
             var db = new ExampleContex();
             var geo = db.geoDatas.ToList();
             var creator = db.Creators.ToList();
-            var model = new ViewModel { Creators = creator, GeoDatas = geo };
+            var cafe_staff = db.Cafe_Staffs.ToList();
+            var drink = db.Drinks.ToList();
+            var ingredient = db.Ingredients.ToList();
+            var review = db.Reviews.ToList();
+            var order = db.Orders.ToList();
+            var menu = db.Menus.ToList();
+            var model = new ViewModel { Creators = creator, GeoDatas = geo, Cafe_Staffs = cafe_staff, Drinks = drink, Ingredients = ingredient, Reviews = review, Orders = order, Menu = menu };
             return View(model);
+
         }
 
         public IActionResult Menu()
@@ -28,7 +35,13 @@ namespace Progect_1.Controllers
             var db = new ExampleContex();
             var geo = db.geoDatas.ToList();
             var creator = db.Creators.ToList();
-            var model = new ViewModel { Creators = creator, GeoDatas = geo };
+            var cafe_staff = db.Cafe_Staffs.ToList();
+            var drink = db.Drinks.ToList();
+            var ingredient = db.Ingredients.ToList();
+            var review = db.Reviews.ToList();
+            var order = db.Orders.ToList();
+            var menu = db.Menus.ToList();
+            var model = new ViewModel { Creators = creator, GeoDatas = geo, Cafe_Staffs = cafe_staff, Drinks = drink, Ingredients = ingredient, Reviews = review, Orders = order, Menu = menu};
             return View(model);
             
         }
@@ -43,12 +56,30 @@ namespace Progect_1.Controllers
             var db = new ExampleContex();
             var geo = db.geoDatas.ToList();
             var creator = db.Creators.ToList();
-            var model = new ViewModel { Creators = creator, GeoDatas = geo };
+            var cafe_staff = db.Cafe_Staffs.ToList();
+            var drink = db.Drinks.ToList();
+            var ingredient = db.Ingredients.ToList();
+            var review = db.Reviews.ToList();
+            var order = db.Orders.ToList();
+            var menu = db.Menus.ToList();
+            var model = new ViewModel { Creators = creator, GeoDatas = geo, Cafe_Staffs = cafe_staff, Drinks = drink, Ingredients = ingredient, Reviews = review, Orders = order, Menu = menu };
             return View(model);
+
         }
         public IActionResult Review()
         {
-            return View();
+            var db = new ExampleContex();
+            var geo = db.geoDatas.ToList();
+            var creator = db.Creators.ToList();
+            var cafe_staff = db.Cafe_Staffs.ToList();
+            var drink = db.Drinks.ToList();
+            var ingredient = db.Ingredients.ToList();
+            var review = db.Reviews.ToList();
+            var order = db.Orders.ToList();
+            var menu = db.Menus.ToList();
+            var model = new ViewModel { Creators = creator, GeoDatas = geo, Cafe_Staffs = cafe_staff, Drinks = drink, Ingredients = ingredient, Reviews = review, Orders = order, Menu = menu };
+            return View(model);
+
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
