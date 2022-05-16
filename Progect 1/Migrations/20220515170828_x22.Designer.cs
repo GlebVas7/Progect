@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Progect_1.Storage;
 
@@ -11,9 +12,10 @@ using Progect_1.Storage;
 namespace Progect_1.Migrations
 {
     [DbContext(typeof(ExampleContex))]
-    partial class ExampleContexModelSnapshot : ModelSnapshot
+    [Migration("20220515170828_x22")]
+    partial class x22
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -137,9 +139,6 @@ namespace Progect_1.Migrations
 
                     b.Property<int>("Grams")
                         .HasColumnType("int");
-
-                    b.Property<string>("Link")
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("NameOfFood")
                         .HasColumnType("nvarchar(max)");

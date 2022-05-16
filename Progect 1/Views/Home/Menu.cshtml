@@ -1,35 +1,35 @@
 ﻿@model ViewModel;
-<!DOCTYPE html>
-<html lang="ru">
-<head>
+
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>menu</title>
     @await Html.PartialAsync("csspartial" )
-</head>
 
 
-<body>
+
     <div class="menu_m">
       <div class="heading_m">
          <h3>&mdash; МЕНЮ &mdash;</h3>
       </div>
-
+    </div>
       <!-- soup -->
       <h2>Супы</h2>
       <div class="soup">
+          @foreach(var item in Model.Menu){
          <div class="food-items">
-            <img src="~/img/мисо рамен со свининой.jpg" width=500px>
+            <img src="@item.Link" width=500px>
             <div class="details">
                <div class="details-sub">
-                  <h5>название1</h5>
-                  <h5 class="price">price1</h5>
-                  <h5 class="massa">гр1</h5>
+                  <h5>@item.NameOfFood</h5>
+                  <h5 class="price">@item.Price</h5>
+                  <h5 class="massa">@item.Grams</h5>
                </div>
                <p>description1</p>
             </div>
-         </div>
-
+         </div>}
+      </div>
+      
+@*
          <div class="food-items">
             <img src="~/img/мисо суп с креветками.jpg" width=500px>
             <div class="details">
@@ -337,4 +337,4 @@
 
    </div>
 </body>
-</html>
+</html>*@
