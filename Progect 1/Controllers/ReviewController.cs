@@ -12,17 +12,20 @@ namespace Progect_1.Controllers
         {
             _manager = manager;
         }
+        [HttpGet]
         public async Task<IActionResult> Review()
         {
-            var review = await _manager.OutputData();
-            return View(review);
+            var reviews = await _manager.OutputData();
+            return View(reviews);
         }
-        [HttpGet]
-        [Route("review")]
-        public async Task<IList<Review>> GetAll() => await _manager.OutputData();
-
-        [HttpPut]
-        [Route("review")]
-        public async Task Create([FromBody] Review reviews) => await _manager.AddComment(reviews);
+        [HttpPost]
+        public async Task<IActionResult> Review(string Name, string Lastname, string Review)
+        {
+            if (Name != null && Lastname != null && Review != null)
+            {
+                await _manager.AddComment(Lastname, Name, Review);
+            }
+            return RedirectToAction("Review");
+        }
     }
 }
