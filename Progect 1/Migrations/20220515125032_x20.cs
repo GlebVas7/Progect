@@ -8,9 +8,7 @@ namespace Progect_1.Migrations
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropColumn(
-                name: "Price_Of_Order",
-                table: "Orders");
+            
 
             migrationBuilder.AddColumn<string>(
                 name: "Adress",
@@ -45,12 +43,6 @@ namespace Progect_1.Migrations
                 name: "Name",
                 table: "Orders");
 
-            migrationBuilder.AddColumn<int>(
-                name: "Price_Of_Order",
-                table: "Orders",
-                type: "int",
-                nullable: false,
-                defaultValue: 0);
         }
     }
 }

@@ -14,6 +14,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 var connectionString = builder.Configuration.GetConnectionString("DbConnection");
 builder.Services.AddTransient<ICafe_StaffModel, Cafe_StaffModel>();
+builder.Services.AddTransient<IDrinkModel, DrinkModel>();
 builder.Services.AddTransient<ICreatorModel, CreatorModel>();
 builder.Services.AddTransient<IGeoDatasModel, GeoDatasModel>();
 builder.Services.AddTransient<IIngredientModel, IngredientModel>();

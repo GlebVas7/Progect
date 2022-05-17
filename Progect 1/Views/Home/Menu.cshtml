@@ -336,5 +336,52 @@
       </div>
 
    </div>
+
+     @* <div class="card">
+      <form asp-action="Create" asp-controler="Order" method="post">
+         <input type="number" class="card-numberofdish" placeholder="Введите номер блюда">
+         <input type="number" class="card-numberofdish" placeholder="Введите номер напитка">
+         <input type="submit" value="Рассчитать">
+      </form>
+      <input type="number" value="950" readonly class="cost1">
+      <input type="number" value="150" readonly class="cost2">
+      <form asp-action="totalmenu">
+         <input type="text" class="card-totalcost" readonly>
+         <input type="submit" value="Заказать">
+      </form>
+   </div>*@
+@*    <div class="container">
+      <div class="col-lg-12">
+         <h2 class="delever">Доставка</h2>
+      </div>
+
+      <div class="delever_window reviews">
+         <form asp-action="Create" asp-controller="Order" asp-antiforgery="true">
+            <div class="window">
+               <label asp-for="Name">Имя:</label>
+               <input type="text" class="text_d" id="comment_name" placeholder="Введите ваше имя">
+            </div>
+            <div class="window">
+               <label asp-for="Lastname">Фамилия:</label>
+               <input type="text" class="text_d" id="comment_surname" placeholder="Введите вашу фамилию">
+            </div>
+            <div class="window">
+               <label asp-for="NameOfFood">Название блюда:</label>
+               <input type="text" class="text_d" id="comment_dish" placeholder="Введите название блюда">
+            </div>
+            <div class="window">
+               <label asp-for="NameOfDrink">Название напитка:</label>
+               <input type="text" class="text_d" id="comment_drink" placeholder="Введите название напитка">
+            </div>
+            <div class="body_button">
+               <button type="submit" id="comment_add" class="button_hola"><span>Отправить заказ</span></button>
+            </div>
+         </form>
+      </div>
+   </div>*@
+
+
+  
+
 </body>
 </html>
