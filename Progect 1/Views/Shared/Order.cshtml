@@ -1,4 +1,4 @@
-﻿ 
+﻿@model IList<Progect_1.Storage.Entity.Order> 
 <section class="order" id="order">
 
       <div class="heading">
@@ -6,7 +6,7 @@
          <h3>Быстрая доставка до дома</h3>
       </div>
 
-      <form asp-controller="Order" asp-action="Create">
+      <form asp-controller="Order" asp-action="Order">
          <div class="box-container">
             <div class="box">
                <div class="inputBox">
@@ -15,7 +15,7 @@
                </div>
                <div class="inputBox">
                   <span>Фамилия</span>
-                  <input type="text" name="Surname" placeholder="Введите вашу фамилию">
+                  <input type="text" name="LastName" placeholder="Введите вашу фамилию">
                </div>
                <div class="inputBox">
                   <span>Блюдо</span>
@@ -29,7 +29,7 @@
                </div>
                <div class="inputBox">
                   <span>Адрес</span>
-                  <textarea name="" placeholder="Введите ваш адрес" cols="30" rows="6"></textarea>
+                  <textarea name="Adress" placeholder="Введите ваш адрес" cols="30" rows="6"></textarea>
                </div>
                <div class="body_button">
                   <input type="submit" name="comment_add" class="button_hola"><span>Отправить заказ</span></input>
@@ -38,5 +38,4 @@
          </div>
          <input type="submit" value="order now" class="btn">
       </form>
-
    </section>
