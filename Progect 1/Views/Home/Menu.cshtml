@@ -1,10 +1,11 @@
 ﻿@model ViewModel;
-
+<head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>menu</title>
     @await Html.PartialAsync("csspartial" )
-
+    <link rel="stylesheet" href="\wwwroot\css\style.css">
+</head>
 
 
     <div class="menu_m">
@@ -26,7 +27,8 @@
                </div>
                <p>description1</p>
             </div>
-         </div>}
+         </div>
+          }
       </div>
       
 @*
@@ -385,8 +387,33 @@
       </div>
    </div>*@
 
+   @*<div class="delever_window">
+         <form asp-action="Create" asp-controller="Order">
+            <div class="window">
+               <label for="Name">Имя:</label>
+               <input type="text" class="text_d" name="Name" placeholder="Введите ваше имя">
+            </div>
+            <div class="window">
+               <label for="Lastname">Фамилия:</label>
+               <input type="text" class="text_d" name="Surname" placeholder="Введите вашу фамилию">
+            </div>
+            <div class="window">
+               <label for="Adress">Адрес:</label>
+               <input type="text" class="text_d" name="Adress" placeholder="Введите ваш адрес">
+            </div>
+            <div class="window">
+               <label for="NameOfFood">Название блюда:</label>
+               <input type="text" class="text_d" name="NameOfFood" placeholder="Введите название блюда">
+            </div>
+            <div class="window">
+               <label for="NameOfDrink">Название напитка:</label>
+               <input type="text" class="text_d" name="NameOfDrink" placeholder="Введите название напитка">
+            </div>
+            <div class="body_button">
+               <input type="submit" name="comment_add" class="button_hola"><span>Отправить заказ</span></input>
+            </div>
+         </form>
+      </div>*@
+      <a asp-action="Order" class="btn">Заказать</a>
 
   
-
-</body>
-</html>*@

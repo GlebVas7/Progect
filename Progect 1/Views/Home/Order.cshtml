@@ -1,0 +1,42 @@
+﻿ 
+<section class="order" id="order">
+
+      <div class="heading">
+         <span>Заказать сейчас</span>
+         <h3>Быстрая доставка до дома</h3>
+      </div>
+
+      <form asp-controller="Order" asp-action="Create">
+         <div class="box-container">
+            <div class="box">
+               <div class="inputBox">
+                  <span>Имя</span>
+                  <input type="text" name="Name" placeholder="Введите ваше имя">
+               </div>
+               <div class="inputBox">
+                  <span>Фамилия</span>
+                  <input type="text" name="Surname" placeholder="Введите вашу фамилию">
+               </div>
+               <div class="inputBox">
+                  <span>Блюдо</span>
+                  <input type="text" name="NameOfFood" placeholder="Введите назавание блюда">
+               </div>
+            </div>
+            <div class="box">
+               <div class="inputBox">
+                  <span>Напиток</span>
+                  <input type="text" name="NameOfDrink" placeholder="Введите название напитка">
+               </div>
+               <div class="inputBox">
+                  <span>Адрес</span>
+                  <textarea name="" placeholder="Введите ваш адрес" cols="30" rows="6"></textarea>
+               </div>
+               <div class="body_button">
+                  <input type="submit" name="comment_add" class="button_hola"><span>Отправить заказ</span></input>
+               </div>
+            </div>
+         </div>
+         <input type="submit" value="order now" class="btn">
+      </form>
+
+   </section>

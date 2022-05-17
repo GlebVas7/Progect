@@ -53,6 +53,11 @@ namespace Progect_1.Controllers
             return View();
         }
 
+        public IActionResult Order()
+        {
+            return View();
+        }
+
         public IActionResult staff()
         {
             var db = new ExampleContex();

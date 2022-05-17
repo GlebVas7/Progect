@@ -55,6 +55,166 @@ section {
     padding: 5rem 10%;
 }
 
+
+/*delevery start
+*/
+/*.delever {
+    color: var(--brown);
+    margin-bottom: 10px;
+    padding: 10px 0;*/
+    /* grid-column: 1/-1; */
+    /*text-align: center;
+    font-size: 30px;
+}
+
+.delever_window {
+    margin: 70px;
+}
+
+.window {
+    font-size: 20px;
+}
+
+.text_d {
+    font-size: 15px;
+}
+
+#Name {
+    color: #1f0a04;
+    margin: 10px 0;
+    padding: 10px 20px;
+    width: 100%;
+    resize: none;
+    border: 1px solid #ced4da;
+    border-radius: 0.375rem;
+}
+
+#Surname {
+    color: #1f0a04;
+    margin: 10px 0;
+    padding: 10px 20px;
+    width: 100%;
+    resize: none;
+    border: 1px solid #ced4da;
+    border-radius: 0.375rem;
+}
+
+#NameOfFood {
+    color: #1f0a04;
+    margin: 10px 0;
+    padding: 10px 20px;
+    width: 100%;
+    resize: none;
+    border: 1px solid #ced4da;
+    border-radius: 0.375rem;
+}
+
+#NameOfDrink {
+    color: #1f0a04;
+    margin: 10px 0;
+    padding: 10px 20px;
+    width: 100%;
+    resize: none;
+    border: 1px solid #ced4da;
+    border-radius: 0.375rem;
+}
+
+#body_button {
+    background: #000;
+    height: 20px;
+    margin: 0;
+    padding: 0;
+    color: #ddf;
+    background-color: #112;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.button_hola,
+.button_hola::before,
+.button_hola::after,
+.button_hola span,
+.button_hola span::before,
+.button_hola span::after {
+    transition: all ease .5s;
+}
+
+.button_hola {
+    position: relative;
+    display: inline-block;
+    padding: 0.3em;
+    margin: 1em;
+    border: solid 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+    .button_hola span {
+        display: inline-block;
+        width: 100%;
+        padding: 0.6em 2em;
+        line-height: 15px;
+        font-size: 10px;
+    }
+
+    .button_hola:hover span {
+        background-color: #fff;
+        color: #112;
+    }
+
+    .button_hola::before,
+    .button_hola::after,
+    .button_hola span::before,
+    .button_hola span::after {
+        content: '';
+        position: absolute;
+        border: 1px;
+    }
+
+    .button_hola::before,
+    .button_hola span::before {
+        border-style: solid none;
+    }
+
+    .button_hola::before,
+    .button_hola span::after {
+        left: 0;
+        top: -0.4em;
+        width: 100%;
+        height: calc(100% + 0.8em);
+    }
+
+    .button_hola::after,
+    .button_hola span::after {
+        border-style: none solid;
+    }
+
+    .button_hola::after,
+    .button_hola span::before {
+        top: 0;
+        left: -0.4em;
+        height: 100%;
+        width: calc(100% + 0.8em);
+    }
+
+    .button_hola:hover::after,
+    .button_hola:hover span::after {
+        transform: scaleY(0);
+    }
+
+    .button_hola:hover::before,
+    .button_hola:hover span::before {
+        transform: scaleX(0);
+    }
+
+    .button_hola:hover span::after,
+    .button_hola:hover span::before {
+        opacity: 0;
+    }*/
+
+/*delevery end
+*/
+
 /*location start
 */
 
@@ -645,6 +805,8 @@ h2 {
                 cursor: pointer;
             }
 
+/*Order start
+*/
 .order {
     background: var(--peru);
 }
@@ -701,7 +863,7 @@ h2 {
                         }
 
                 .order form .box-container .box .inputBox textarea {
-                    height: 20rem;
+                    height: 135px;
                     resize: none;
                 }
 
@@ -715,8 +877,102 @@ h2 {
                     color: var(--light-black);
                     font-size: 2rem;
                 }
+#body_button {
+    background: #000;
+    height: 20px;
+    margin: 0;
+    padding: 0;
+    color: #ddf;
+    background-color: #112;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.button_hola,
+.button_hola::before,
+.button_hola::after,
+.button_hola span,
+.button_hola span::before,
+.button_hola span::after {
+    transition: all ease .5s;
+}
+
+.button_hola {
+    position: relative;
+    display: inline-block;
+    padding: 0.3em;
+    margin: 1em;
+    border: solid 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+    .button_hola span {
+        display: inline-block;
+        width: 100%;
+        padding: 0.6em 2em;
+        line-height: 15px;
+        font-size: 10px;
+    }
+
+    .button_hola:hover span {
+        background-color: #fff;
+        color: #112;
+    }
+
+    .button_hola::before,
+    .button_hola::after,
+    .button_hola span::before,
+    .button_hola span::after {
+        content: '';
+        position: absolute;
+        border: 1px;
+    }
+
+    .button_hola::before,
+    .button_hola span::before {
+        border-style: solid none;
+    }
+
+    .button_hola::before,
+    .button_hola span::after {
+        left: 0;
+        top: -0.4em;
+        width: 100%;
+        height: calc(100% + 0.8em);
+    }
+
+    .button_hola::after,
+    .button_hola span::after {
+        border-style: none solid;
+    }
+
+    .button_hola::after,
+    .button_hola span::before {
+        top: 0;
+        left: -0.4em;
+        height: 100%;
+        width: calc(100% + 0.8em);
+    }
+
+    .button_hola:hover::after,
+    .button_hola:hover span::after {
+        transform: scaleY(0);
+    }
+
+    .button_hola:hover::before,
+    .button_hola:hover span::before {
+        transform: scaleX(0);
+    }
+
+    .button_hola:hover span::after,
+    .button_hola:hover span::before {
+        opacity: 0;
+    }
 
 
+/*    order end
+*/
 
 
 /*footer start
@@ -1380,6 +1636,8 @@ h2 {
     }
 }
 /*staff page ends*/
+
+
 
 
 
