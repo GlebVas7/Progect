@@ -8,8 +8,7 @@ namespace Progect_1.Migrations
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            
-
+           
             migrationBuilder.AddColumn<string>(
                 name: "Adress",
                 table: "Orders",
@@ -43,6 +42,7 @@ namespace Progect_1.Migrations
                 name: "Name",
                 table: "Orders");
 
+          
         }
     }
 }

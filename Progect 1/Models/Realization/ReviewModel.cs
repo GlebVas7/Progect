@@ -12,18 +12,13 @@ namespace Progect_1.Models.Realization
         {
             _dbContext = exampleContex;
         }
-        public async Task AddComment(Review review)
+        public async Task AddComment(string Lastname, string Name, string Review)
         {
-            review.Id = Guid.NewGuid();
-            if (review.Id != null)
-            {
-                _dbContext.Add(review);
-                await _dbContext.SaveChangesAsync();
-            }
-            else
-            {
-                throw new NotImplementedException();
-            }
+            var review = new Review {Id= Guid.NewGuid(), Lastname = Lastname, Name = Name, Reviews = Review };
+             
+            _dbContext.Add(review);
+            await _dbContext.SaveChangesAsync();
+          
         }
         public async Task DeleteComment(Guid id)
         {

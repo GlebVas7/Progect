@@ -5,7 +5,7 @@ namespace Progect_1.Models.Interface
     public interface IReviewModel
     {
         Task<IList<Review>> OutputData();
-        Task AddComment(Review review);
+        Task AddComment(string Lastname, string Name, string Review);
         Task DeleteComment(Guid id);
     }
 }

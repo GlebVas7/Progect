@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Progect_1.Models;
+using Progect_1.Models.Interface;
 using Progect_1.Storage;
 using System.Diagnostics;
 
@@ -8,10 +9,11 @@ namespace Progect_1.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        private readonly IReviewModel _manager;
+        public HomeController(ILogger<HomeController> logger, IReviewModel manager)
         {
             _logger = logger;
+            _manager = manager;
         }
 
         public IActionResult Index()
@@ -66,10 +68,10 @@ namespace Progect_1.Controllers
             return View(model);
 
         }
-        public IActionResult Review()
+        public async Task<IActionResult> Review()
         {
-            return View();
-
+            var reviews = await _manager.OutputData();
+            return View(reviews);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
