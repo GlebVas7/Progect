@@ -25,18 +25,6 @@ namespace Progect_1.Models
             }
             
         }
-
-        public async Task DeleteStaff(Guid id)
-        {
-
-           var entity = _dbContext.Cafe_Staffs.FirstOrDefault(x => x.Id == id);
-            if (entity != null)
-                _dbContext.Cafe_Staffs.Remove(entity);
-            _dbContext.SaveChangesAsync();
-        }
-
         public async Task<IList<Cafe_Staff>> getAllStaff() => await _dbContext.Cafe_Staffs.ToListAsync();
-
-       
     }
 }

@@ -12,17 +12,6 @@ namespace Progect_1.Models
         {
             _dbContext = dbContext;
         }
-
-        public async Task deleteCreator(Guid id)
-        {
-            var entity = await _dbContext.Creators.FirstOrDefaultAsync(x => x.Id == id);
-
-            if(entity != null)
-                _dbContext.Remove(entity);
-
-            await _dbContext.SaveChangesAsync();
-        }
-
         public async Task <IList<Creator>> getAllCreator() => await _dbContext.Creators.ToListAsync();
 
     }

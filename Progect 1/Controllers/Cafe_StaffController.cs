@@ -20,7 +20,6 @@ namespace Progect_1.Controllers
         [Route("cafe_staff")]
         public async Task<IList<Cafe_Staff>> GetAll() => await _manager.getAllStaff();
         [HttpPut]
-        [Route("cafe_staff")]
         public Task Create([FromBody] Cafe_Staff cafe_Staff) => _manager.CreateStaff(cafe_Staff);
     }
 }

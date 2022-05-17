@@ -24,15 +24,6 @@ namespace Progect_1.Models
                 throw new NotImplementedException();
             }
         }
-
-        public async Task DeleteIngredient(Guid Id)
-        {
-            var entity = _dbContext.Ingredients.FirstOrDefault(x => x.Id == Id);
-            if (entity != null)
-                _dbContext.Ingredients.Remove(entity);
-            await _dbContext.SaveChangesAsync();
-        }
-
         public async Task<IList<Ingredient>> GetAllIngredients() => await _dbContext.Ingredients.ToListAsync();
 
     }

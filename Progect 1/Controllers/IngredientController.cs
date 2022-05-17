@@ -24,9 +24,5 @@ namespace Progect_1.Controllers
         [HttpPut]
         [Route("ingridient")]
         public Task Create([FromBody] Ingredient ingridient) => _manager.AddIngredient(ingridient);
-
-        [HttpDelete] 
-        [Route("ingridient/{Id}")]
-        public Task Delete([FromBody] Guid Id) => _manager.DeleteIngredient(Id);
     }
 }

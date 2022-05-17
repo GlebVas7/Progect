@@ -23,17 +23,7 @@ namespace Progect_1.Models
             {
                 throw new NotImplementedException();
             }
-            
         }
-
-        public async Task DeleteGeo(Guid id)
-        {
-            var entity = _dbContext.geoDatas.FirstOrDefault(x => x.Id == id);
-            if (entity != null)
-                _dbContext.geoDatas.Remove(entity);
-            await _dbContext.SaveChangesAsync();
-        }
-
         public async Task<IList<GeoDatas>> GetAllGeoDatas() => await _dbContext.geoDatas.ToListAsync();
        
     }

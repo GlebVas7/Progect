@@ -19,8 +19,5 @@ namespace Progect_1.Controllers
         [HttpGet]
         [Route("creator")]
         public async Task<IList<Creator>> GetAll() => await _manager.getAllCreator();
-        [HttpDelete] 
-        [Route("creators/{Id}")]
-        public Task Delete([FromBody] Guid Id) => _manager.deleteCreator(Id);
     }
 }
