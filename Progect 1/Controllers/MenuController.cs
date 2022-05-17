@@ -25,9 +25,6 @@ namespace Progect_1.Controllers
         [Route("menu")]
         public Task Create([FromBody] Menu menu) => _manager.AddData(menu);
 
-        [HttpDelete] 
-        [Route("menu/{id}")]
-        public Task Delete([FromBody] int id) => _manager.DeleteData(id);
         public IActionResult AddDish(int id)
         {
             var menu = _manager.FindFood(id);

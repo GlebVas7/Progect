@@ -20,14 +20,6 @@ namespace Progect_1.Models.Realization
             await _dbContext.SaveChangesAsync();
           
         }
-        public async Task DeleteComment(Guid id)
-        {
-            var entity = _dbContext.Reviews.FirstOrDefault(x => x.Id == id);
-            if (entity != null)
-                _dbContext.Reviews.Remove(entity);
-            await _dbContext.SaveChangesAsync(); ;
-        }
-
         public async Task<IList<Review>> OutputData() => await _dbContext.Reviews.ToListAsync();
     }
 }

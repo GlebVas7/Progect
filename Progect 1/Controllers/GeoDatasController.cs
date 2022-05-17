@@ -21,11 +21,6 @@ namespace Progect_1.Controllers
         public async Task<IList<GeoDatas>> GetAll() => await _manager.GetAllGeoDatas();
 
         [HttpPut]
-        [Route("geoData")]
         public Task Create([FromBody] GeoDatas geoData) => _manager.AddGeo(geoData);
-
-        [HttpDelete] 
-        [Route("geoData/{Id}")]
-        public Task Delete([FromBody] Guid Id) => _manager.DeleteGeo(Id);
     }
 }

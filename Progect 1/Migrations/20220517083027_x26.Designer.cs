@@ -12,8 +12,8 @@ using Progect_1.Storage;
 namespace Progect_1.Migrations
 {
     [DbContext(typeof(ExampleContex))]
-    [Migration("20220515151623_x24")]
-    partial class x24
+    [Migration("20220517083027_x26")]
+    partial class x26
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -139,6 +139,9 @@ namespace Progect_1.Migrations
 
                     b.Property<int>("Grams")
                         .HasColumnType("int");
+
+                    b.Property<string>("Link")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("NameOfFood")
                         .HasColumnType("nvarchar(max)");

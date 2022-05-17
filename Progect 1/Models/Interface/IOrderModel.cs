@@ -4,8 +4,7 @@ namespace Progect_1.Models
 {
     public interface IOrderModel
     {
-        Task DeleteOrder(Guid Id);
-        Task AddNewOrder(Order order);
-
+        Task AddOrder(string NameOfFood, string NameOfDrink, string Name, string Lastname, string Adress);
+        Task<IList<Order>> OutputData();
     }
 }
