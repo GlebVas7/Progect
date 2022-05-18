@@ -232,11 +232,12 @@ section {
 
 .location_name {
     color: var(--brown);
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
     padding: 10px 0;
     /* grid-column: 1/-1; */
     text-align: center;
-    font-size: 30px;
+    font-size: 3.5rem;
 }
 
 .location_item {
@@ -561,10 +562,14 @@ h2 {
     color: var(--white);
 }
 
+.swiper-pagination-bullet {
+    background: #999;
+}
+
     .swiper-button-next:hover,
     .swiper-button-prev:hover {
         background: transparent;
-        color: var(--white);
+        color: var(--peru);
     }
 
     .swiper-button-next::after,
@@ -653,6 +658,8 @@ h2 {
     bottom: 0;
 }
 
+
+
 .food .swiper-slide-active {
     transform: scale(1);
     opacity: 1;
@@ -676,6 +683,11 @@ h2 {
 .food .slide .price_f {
     font-size: 2.5rem;
     color: var(--peru);
+}
+
+.price_n{
+    text-align: center;
+    font-size: 30px;
 }
 
 .food-preview-container {
