@@ -11,6 +11,10 @@ namespace Progect_1.Controllers
         {
             _manager = manager;
         }
+        public IActionResult Order()
+        {
+            return View();
+        }
         [HttpPost]
         public async Task<IActionResult> Order(string NameOfFood, string NameOfDrink, string Name, string Lastname, string Adress)
         {

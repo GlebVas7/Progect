@@ -8,7 +8,6 @@ namespace Progect_1.Models
     public class OrderModel : IOrderModel
     {
         private ExampleContex _dbContext;
-        private bool flag = false;
         public OrderModel(ExampleContex exampleContex)
         {
             _dbContext = exampleContex;
