@@ -24,8 +24,8 @@
     border: none;
     text-decoration: none;
     transition: all 0.4s cubic-bezier(.43, 1.1, .62, 1.08);
-    text-transform: capitalize;
-}
+/*    text-transform: capitalize;
+*/}
 
     * > img {
         user-select: none;
@@ -363,11 +363,27 @@ section {
 
 
 .soup {
+    background: url(~/img/background48.png);
     padding: 0 10px 30px 10px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     grid-gap: 20px 40px;
 }
+
+.btn_m {
+    margin-top: 1rem;
+    display: inline-block;
+    background: transparent;
+    color: var(--black);
+    border: #fff 1px solid;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 1rem 3rem;
+}
+
+    .btn_m:hover {
+        letter-spacing: .2rem;
+    }
 
 .gedza {
     padding: 0 10px 30px 10px;
@@ -406,6 +422,8 @@ h2 {
     letter-spacing: 5px;
     font-family: 'Libre Bodoni', serif;
 }
+
+
 
 /*menu finish
 */
@@ -889,6 +907,8 @@ h2 {
                     color: var(--light-black);
                     font-size: 2rem;
                 }
+
+
 #body_button {
     background: #000;
     height: 20px;
