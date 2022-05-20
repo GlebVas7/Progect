@@ -371,11 +371,13 @@ section {
 }
 
 .btn_m {
-    margin-top: 1rem;
+    margin-left:30px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     display: inline-block;
     background: transparent;
     color: var(--black);
-    border: #fff 1px solid;
+    border: #000 1px solid;
     font-size: 2rem;
     cursor: pointer;
     padding: 1rem 3rem;
@@ -897,18 +899,30 @@ h2 {
                     resize: none;
                 }
 
-                .order form .box-container .box .inputBox .map {
+                /*.order form .box-container .box .inputBox .map {
                     height: 20rem;
                     width: 100%;
                     margin: 1rem 0;
-                }
+                }*/
 
                 .order form .box-container .box .inputBox span {
                     color: var(--light-black);
                     font-size: 2rem;
                 }
 
+.button_hola {
+    position: relative;
+    display: inline-block;
+    background-color: var(--white);
+    padding: 8px 10px;
+    margin-top: 10px;
+    border: solid 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 10px;
+}
 
+/*
 #body_button {
     background: #000;
     height: 20px;
@@ -920,10 +934,10 @@ h2 {
     padding-top: 20px;
 }
 
-.button_hola,
-.button_hola::before,
-.button_hola::after,
-.button_hola span,
+.button_hola
+.button_hola::before
+.button_hola::after
+.button_hola span
 .button_hola span::before,
 .button_hola span::after {
     transition: all ease .5s;
@@ -952,21 +966,21 @@ h2 {
         color: #112;
     }
 
-    .button_hola::before,
-    .button_hola::after,
-    .button_hola span::before,
+    .button_hola::before
+    .button_hola::after
+    .button_hola span::before
     .button_hola span::after {
         content: '';
         position: absolute;
         border: 1px;
     }
 
-    .button_hola::before,
+    .button_hola::before
     .button_hola span::before {
         border-style: solid none;
     }
 
-    .button_hola::before,
+    .button_hola::before
     .button_hola span::after {
         left: 0;
         top: -0.4em;
@@ -974,12 +988,12 @@ h2 {
         height: calc(100% + 0.8em);
     }
 
-    .button_hola::after,
+    .button_hola::after
     .button_hola span::after {
         border-style: none solid;
     }
 
-    .button_hola::after,
+    .button_hola::after
     .button_hola span::before {
         top: 0;
         left: -0.4em;
@@ -987,21 +1001,21 @@ h2 {
         width: calc(100% + 0.8em);
     }
 
-    .button_hola:hover::after,
+    .button_hola:hover::after
     .button_hola:hover span::after {
         transform: scaleY(0);
     }
 
-    .button_hola:hover::before,
+    .button_hola:hover::before
     .button_hola:hover span::before {
         transform: scaleX(0);
     }
 
-    .button_hola:hover span::after,
+    .button_hola:hover span::after
     .button_hola:hover span::before {
         opacity: 0;
     }
-
+*/
 
 /*    order end
 */

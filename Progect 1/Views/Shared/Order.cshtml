@@ -11,28 +11,31 @@
             <div class="box">
                <div class="inputBox">
                   <span>Имя</span>
-                  <input type="text" name="Name" placeholder="Введите ваше имя">
+                  <input type="text" name="Name" placeholder="Введите ваше имя" required
+                  pattern="^[А-Яа-яЁё\s]+$">
                </div>
                <div class="inputBox">
                   <span>Фамилия</span>
-                  <input type="text" name="LastName" placeholder="Введите вашу фамилию">
+                  <input type="text" name="LastName" placeholder="Введите вашу фамилию" required
+                  pattern="^[А-Яа-яЁё\s]+$">
                </div>
                <div class="inputBox">
                   <span>Блюдо</span>
-                  <input type="text" name="NameOfFood" placeholder="Введите назавание блюда">
+                  <input type="text" name="NameOfFood" placeholder="Введите назавание блюда" required>
                </div>
             </div>
             <div class="box">
                <div class="inputBox">
                   <span>Напиток</span>
-                  <input type="text" name="NameOfDrink" placeholder="Введите название напитка">
+                  <input type="text" name="NameOfDrink" placeholder="Введите название напитка" required>
                </div>
                <div class="inputBox">
                   <span>Адрес</span>
-                  <textarea name="Adress" placeholder="Введите ваш адрес" cols="30" rows="6"></textarea>
+                  <textarea name="Adress" placeholder="Введите ваш адрес" cols="30" rows="6" required></textarea>
                </div>
                <div class="body_button">
-                  <input type="submit" name="comment_add" class="button_hola"><span>Отправить заказ</span></input>
+@*                  <span>Отправить заказ</span>
+*@                  <input type="submit" value="Отправить заказ" name="comment_add" class="button_hola">                   
                </div>
             </div>
          </div>
