@@ -17,8 +17,14 @@
                     <div class="photopovora">
                         <img id="photo1" src="/img/chef.jpg" alt="Povar1"></div>
                     <div class="fio">
-                        <h3 class="namepovar">Виктор Баринов</h3>
-                        <h4 class="position">Шеф-повар</h4>
+                         @foreach(var item in Model.Cafe_Staffs)
+                        {
+                            @if(item.Name == "Виктор" && item.Lastname == "Баринов")
+                            {
+                                <h3 class="namepovar">@item.Name @item.Lastname</h3>
+                                <h4 class="position">@item.Profession</h4>
+                            }
+                        }
                     </div>
                 </div>
             </div>
@@ -28,8 +34,14 @@
                         <img id="photo2" src="/img/cook1.jpg" alt="Povar2">
                     </div>
                     <div class="fio">
-                        <h3 class="namepovar">Максим Лавров</h3>
-                        <h4 class="position">Су-шеф</h4>
+                         @foreach(var item in Model.Cafe_Staffs)
+                        {
+                            @if(item.Name == "Максим" && item.Lastname == "Лавров")
+                            {
+                                <h3 class="namepovar">@item.Name @item.Lastname</h3>
+                                <h4 class="position">@item.Profession</h4>
+                            }
+                        }
                     </div>
                 </div>
                 <div class="card three">
@@ -37,8 +49,14 @@
                         <img id="photo3" src="/img/cook2.jpg" alt="Povar3">
                     </div>
                     <div class="fio">
-                        <h3 class="namepovar">Федор Богатырев</h3>
-                        <h4 class="position">Повар</h4>
+                         @foreach(var item in Model.Cafe_Staffs)
+                        {
+                            @if(item.Name == "Федор" && item.Lastname == "Богатырев")
+                            {
+                                <h3 class="namepovar">@item.Name @item.Lastname</h3>
+                                <h4 class="position">@item.Profession</h4>
+                            }
+                        }
                     </div>
                 </div>
             </div>
@@ -48,8 +66,14 @@
                         <img id="photo4" src="/img/cook3.jpg" alt="Povar4">
                     </div>
                     <div class="fio">
-                        <h3 class="namepovar">Сергей Лавыгин </h3>
-                        <h4 class="position">Кондитер</h4>
+                        @foreach(var item in Model.Cafe_Staffs)
+                        {
+                            @if(item.Name == "Сергей" && item.Lastname == "Лавыгин")
+                            {
+                                <h3 class="namepovar">@item.Name @item.Lastname</h3>
+                                <h4 class="position">@item.Profession</h4>
+                            }
+                        }
                     </div>
                 </div>
                 <div class="card five">
@@ -57,8 +81,14 @@
                         <img id="photo5" src="/img/barman.jpg" alt="Barman">
                     </div>
                     <div class="fio">
-                        <h3  class="namepovar">Павел Анисимов</h3>
-                        <h4 class="position">Бармен</h4>
+                         @foreach(var item in Model.Cafe_Staffs)
+                        {
+                            @if(item.Name == "Павел" && item.Lastname == "Анисимов")
+                            {
+                                <h3 class="namepovar">@item.Name @item.Lastname</h3>
+                                <h4 class="position">@item.Profession</h4>
+                            }
+                        }
                     </div>
                 </div>
                 <div class="card six">
@@ -66,8 +96,14 @@
                         <img id="photo6" src="/img/admin.jpg" alt="Admin">
                     </div>
                     <div class="fio">
-                        <h3 class="namepovar">Виктория Гончарова</h3>
-                        <h4 class="position">Администратор</h4>
+                        @foreach(var item in Model.Cafe_Staffs)
+                        {
+                            @if(item.Name == "Виктория" && item.Lastname == "Гончарова")
+                            {
+                                <h3 class="namepovar">@item.Name @item.Lastname</h3>
+                                <h4 class="position">@item.Profession</h4>
+                            }
+                        }
                     </div>
                 </div>
             </div>
