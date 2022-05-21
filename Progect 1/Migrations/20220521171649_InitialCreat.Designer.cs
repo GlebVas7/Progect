@@ -12,8 +12,8 @@ using Progect_1.Storage;
 namespace Progect_1.Migrations
 {
     [DbContext(typeof(ExampleContex))]
-    [Migration("20220517083027_x26")]
-    partial class x26
+    [Migration("20220521171649_InitialCreat")]
+    partial class InitialCreat
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -108,11 +108,7 @@ namespace Progect_1.Migrations
 
             modelBuilder.Entity("Progect_1.Storage.Entity.Ingredient", b =>
                 {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<int>("Grams")
+                    b.Property<int>("Id")
                         .HasColumnType("int");
 
                     b.Property<string>("IndredientForDrink")
@@ -120,9 +116,6 @@ namespace Progect_1.Migrations
 
                     b.Property<string>("IndredientForFood")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Liters")
-                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -198,6 +191,23 @@ namespace Progect_1.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Reviews");
+                });
+
+            modelBuilder.Entity("Progect_1.Storage.Entity.Ingredient", b =>
+                {
+                    b.HasOne("Progect_1.Storage.Entity.Menu", "Menu")
+                        .WithOne("Ingredient")
+                        .HasForeignKey("Progect_1.Storage.Entity.Ingredient", "Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Menu");
+                });
+
+            modelBuilder.Entity("Progect_1.Storage.Entity.Menu", b =>
+                {
+                    b.Navigation("Ingredient")
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

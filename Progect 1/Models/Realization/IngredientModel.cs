@@ -11,19 +11,7 @@ namespace Progect_1.Models
         {
             _dbContext = exampleContex;
         }
-        public async Task AddIngredient(Ingredient ingridient)
-        {
-            ingridient.Id = Guid.NewGuid();
-            if (ingridient.Id != null)
-            {
-                _dbContext.Add(ingridient);
-                await _dbContext.SaveChangesAsync();
-            }
-            else
-            {
-                throw new NotImplementedException();
-            }
-        }
+       
         public async Task<IList<Ingredient>> GetAllIngredients() => await _dbContext.Ingredients.ToListAsync();
 
     }

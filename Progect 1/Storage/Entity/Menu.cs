@@ -11,5 +11,6 @@ namespace Progect_1.Storage.Entity
         public int Grams { get; set; }
         public int Price { get; set; }
         public string? Link { get; set; }
+        public Ingredient Ingredient { get; set; }
     }
 }

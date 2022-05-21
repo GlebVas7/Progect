@@ -21,8 +21,6 @@ namespace Progect_1.Controllers
         [Route("ingridient")]
         public async Task<IList<Ingredient>> GetAll() => await _manager.GetAllIngredients();
 
-        [HttpPut]
-        [Route("ingridient")]
-        public Task Create([FromBody] Ingredient ingridient) => _manager.AddIngredient(ingridient);
+        
     }
 }

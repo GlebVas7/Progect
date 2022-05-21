@@ -25,7 +25,7 @@ namespace Progect_1.Controllers
         [Route("menu")]
         public Task Create([FromBody] Menu menu) => _manager.AddData(menu);
 
-        public IActionResult AddDish(int id)
+       /* public IActionResult AddDish(int id)
         {
             var menu = _manager.FindFood(id);
             return View(menu);
@@ -34,6 +34,6 @@ namespace Progect_1.Controllers
         {
             var menu = _manager.FindDrink(id);
             return View(menu);
-        }
+        }*/
     }
 }

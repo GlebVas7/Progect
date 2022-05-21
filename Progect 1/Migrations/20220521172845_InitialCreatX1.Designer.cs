@@ -12,8 +12,8 @@ using Progect_1.Storage;
 namespace Progect_1.Migrations
 {
     [DbContext(typeof(ExampleContex))]
-    [Migration("20220514122541_x19")]
-    partial class x19
+    [Migration("20220521172845_InitialCreatX1")]
+    partial class InitialCreatX1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -108,21 +108,11 @@ namespace Progect_1.Migrations
 
             modelBuilder.Entity("Progect_1.Storage.Entity.Ingredient", b =>
                 {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<int>("Grams")
+                    b.Property<int>("Id")
                         .HasColumnType("int");
-
-                    b.Property<string>("IndredientForDrink")
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("IndredientForFood")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Liters")
-                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -139,6 +129,9 @@ namespace Progect_1.Migrations
 
                     b.Property<int>("Grams")
                         .HasColumnType("int");
+
+                    b.Property<string>("Link")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("NameOfFood")
                         .HasColumnType("nvarchar(max)");
@@ -157,14 +150,20 @@ namespace Progect_1.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<string>("Adress")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Lastname")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("NameOfDrink")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("NameOfFood")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Price_Of_Order")
-                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -189,6 +188,23 @@ namespace Progect_1.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Reviews");
+                });
+
+            modelBuilder.Entity("Progect_1.Storage.Entity.Ingredient", b =>
+                {
+                    b.HasOne("Progect_1.Storage.Entity.Menu", "Menu")
+                        .WithOne("Ingredient")
+                        .HasForeignKey("Progect_1.Storage.Entity.Ingredient", "Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Menu");
+                });
+
+            modelBuilder.Entity("Progect_1.Storage.Entity.Menu", b =>
+                {
+                    b.Navigation("Ingredient")
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

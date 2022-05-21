@@ -33,7 +33,7 @@ namespace Progect_1.Models.Realization
                 _dbContext.Menus.Remove(entity);
             await _dbContext.SaveChangesAsync();
         }
-        public int FindFood(int id)
+        /*public int FindFood(int id)
         {
             foreach (var menu in _dbContext.Menus)
                 if (menu.Id == id)
@@ -46,7 +46,7 @@ namespace Progect_1.Models.Realization
                 if (menu.Id == id)
                     return menu.Price;
             return 0;
-        }
+        }*/
         public async Task<IList<Menu>> OutputData() => await _dbContext.Menus.ToListAsync();
     }
 }

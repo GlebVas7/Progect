@@ -25,10 +25,10 @@
                   <h5 class="price">@item.Price</h5>
                   <h5 class="massa">@item.Grams</h5>
                </div>
-               <p>description1</p>
+               <p>@item.Ingredient.IndredientForFood</p>
             </div>
          </div>
-          }
+         }
       </div>
       
 @*
@@ -414,6 +414,24 @@
             </div>
          </form>
       </div>*@
-      <a asp-action="Order" class="btn_m">Заказать</a>
 
+      <a asp-action="Order" class="btn_m">Заказать</a>
+       <section class="creation" id="contacts">
+        <div class="container">
+            <h2 class="creation-title">Создатели</h2>
+            <div class="creation-wrapper">
+                <div class="row">
+                    @foreach (var creators in Model.Creators)
+                    {
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <div class="creation-card">
+                                <h3 class="creation-card__name">@creators.Lastname @creators.Name</h3>
+                                <p class="creatin-card__link">Ссылка на соцсеть: <span>@creators.Link</span></p>
+                            </div>
+                        </div>                      
+                    }
+                </div>
+            </div>
+        </div>
+    </section>
   

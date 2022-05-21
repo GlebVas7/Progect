@@ -55,7 +55,17 @@ namespace Progect_1.Controllers
 
         public IActionResult Order()
         {
-            return View();
+            var db = new ExampleContex();
+            var geo = db.geoDatas.ToList();
+            var creator = db.Creators.ToList();
+            var cafe_staff = db.Cafe_Staffs.ToList();
+            var drink = db.Drinks.ToList();
+            var ingredient = db.Ingredients.ToList();
+            var review = db.Reviews.ToList();
+            var order = db.Orders.ToList();
+            var menu = db.Menus.ToList();
+            var model = new ViewModel { Creators = creator, GeoDatas = geo, Cafe_Staffs = cafe_staff, Drinks = drink, Ingredients = ingredient, Reviews = review, Orders = order, Menu = menu };
+            return View(model);
         }
 
         public IActionResult staff()
