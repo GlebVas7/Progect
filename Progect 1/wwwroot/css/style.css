@@ -370,17 +370,20 @@ section {
     grid-gap: 20px 40px;
 }
 
+.button_m{
+    text-align: center;
+}
+
 .btn_m {
-    margin-left:30px;
     margin-top: 2rem;
     margin-bottom: 2rem;
     display: inline-block;
     background: transparent;
     color: var(--black);
     border: #000 1px solid;
-    font-size: 2rem;
+    font-size: 25px;
     cursor: pointer;
-    padding: 1rem 3rem;
+    padding: 15px 25px;
 }
 
     .btn_m:hover {
@@ -445,6 +448,7 @@ h2 {
         font-size: 4.5rem;
         color: #cd9452;
     }
+
 
 .btn {
     margin-top: 1rem;
