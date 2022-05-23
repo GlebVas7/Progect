@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Progect_1.Migrations
 {
-    public partial class InitialCreat : Migration
+    public partial class InitialCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -117,8 +117,7 @@ namespace Progect_1.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false),
-                    IndredientForFood = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    IndredientForDrink = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    IndredientForFood = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
