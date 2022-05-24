@@ -15,7 +15,7 @@ namespace Progect_1.Controllers
             _logger = logger;
             _manager = manager;
         }
-
+        
         public IActionResult Index()
         {
             var db = new ExampleContex();
