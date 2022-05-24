@@ -20,11 +20,19 @@
                     <input type="submit" value="Добавить отзыв">
                 </div>
             </form>
-        @foreach(var item in Model)
-        {
-            <h2>@item.Lastname @item.Name</h2>
-            <p>@item.Reviews</p>
-        }
+
+       
+
+        
     </div>
+    @foreach (var c in Model)
+    {
+        <div class="card-review">
+        <h2>@c.Lastname @c.Name</h2>
+        <p class="cardd">@c.Reviews</p>
+    </div>
+        
+   
+    }
     </section>
 
