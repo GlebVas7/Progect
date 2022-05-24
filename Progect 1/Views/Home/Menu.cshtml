@@ -31,7 +31,20 @@
          }
       </div>
       <h2>Напитки</h2>
-      
+       <div class="soup">
+          @foreach(var item in Model.Drinks){
+         <div class="food-items">
+            <img src="@item.Link" width=500px>
+            <div class="details">
+               <div class="details-sub">
+                  <h5>@item.Name_Of_Drink</h5>
+                  <h5 class="price">@item.Price руб</h5>
+                  <h5 class="massa">@item.Liters мл</h5>
+               </div>
+            </div>
+         </div>
+         }
+      </div>
 
       <div class="button_m">
          <a asp-action="Order" class="btn_m">Заказать</a>
@@ -39,7 +52,7 @@
 
 
 
-         <div class="food-items">
+      @*   <div class="food-items">
             <img src="~/img/мисо суп с креветками.jpg" width=500px>
             <div class="details">
                <div class="details-sub">
@@ -351,7 +364,7 @@
 
 
    </div>
-
+*@
      @* <div class="card">
       <form asp-action="Create" asp-controler="Order" method="post">
          <input type="number" class="card-numberofdish" placeholder="Введите номер блюда">

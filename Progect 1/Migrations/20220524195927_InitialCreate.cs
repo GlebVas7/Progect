@@ -45,7 +45,8 @@ namespace Progect_1.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name_Of_Drink = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Liters = table.Column<int>(type: "int", nullable: false)
+                    Liters = table.Column<int>(type: "int", nullable: false),
+                    Price = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {

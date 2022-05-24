@@ -12,8 +12,8 @@ using Progect_1.Storage;
 namespace Progect_1.Migrations
 {
     [DbContext(typeof(ExampleContex))]
-    [Migration("20220523121052_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20220524200119_InitialCreateX1")]
+    partial class InitialCreateX1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -75,11 +75,17 @@ namespace Progect_1.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
+                    b.Property<string>("Link")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("Liters")
                         .HasColumnType("int");
 
                     b.Property<string>("Name_Of_Drink")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Price")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
