@@ -21,11 +21,11 @@ namespace Progect_1.Controllers
             return View();
         }
         [HttpPost]
-        public async Task<IActionResult> Order(string NameOfFood, string NameOfDrink, string Name, string Lastname, string Adress)
+        public async Task<IActionResult> Order(string NameOfFood, string NameOfDrink, string Name, string Phone, string Adress)
         {
-            if (NameOfFood != null && NameOfDrink != null && Name != null && Lastname != null && Adress != null)
+            if (NameOfFood != null && NameOfDrink != null && Name != null && Phone != null && Adress != null)
             {
-                await _manager.AddOrder(NameOfFood, NameOfDrink, Name, Lastname, Adress);
+                await _manager.AddOrder(NameOfFood, NameOfDrink, Name, Phone, Adress);
             }
             return RedirectToAction("OrderComplete");
         }

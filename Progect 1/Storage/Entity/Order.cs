@@ -10,7 +10,7 @@ namespace Progect_1.Storage.Entity
         public string? NameOfFood { get; set; }
         public string? NameOfDrink { get; set; }
         public string? Name { get; set; }
-        public string? Lastname { get; set; }
+        public string? Phone { get; set; }
         public string? Adress { get; set; }
     }
 }

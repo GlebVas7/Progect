@@ -15,9 +15,8 @@
                   pattern="^[А-Яа-яЁё]+$">
                </div>
                <div class="inputBox">
-                  <span>Фамилия</span>
-                  <input type="text" name="LastName" placeholder="Введите вашу фамилию" required
-                  pattern="^[А-Яа-яЁё]+$">
+                  <span>Номер телефона</span>
+                  <input type="text" name="Phone" placeholder="Введите ваш номер телефона" pattern="[8][0-9]{3}[0-9]{3}[0-9]{4}" required>
                </div>
                <div class="inputBox">
                   <span>Блюдо</span>
@@ -40,21 +39,4 @@
          </div>
      </form>
    </section>
-    @*<section class="creation" id="contacts">
-        <div class="container">
-            <h2 class="creation-title">Создатели</h2>
-            <div class="creation-wrapper">
-                <div class="row">
-                    @foreach (var creators in Model.Creators)
-                    {
-                        <div class="col-12 col-md-6 col-lg-3">
-                            <div class="creation-card">
-                                <h3 class="creation-card__name">@creators.Lastname @creators.Name</h3>
-                                <p class="creatin-card__link">Ссылка на соцсеть: <span>@creators.Link</span></p>
-                            </div>
-                        </div>                      
-                    }
-                </div>
-            </div>
-        </div>
-    </section>*@
+    

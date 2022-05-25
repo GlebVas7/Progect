@@ -12,9 +12,9 @@ namespace Progect_1.Models
         {
             _dbContext = exampleContex;
         }
-        public async Task AddOrder(string NameOfFood, string NameOfDrink, string Name, string Lastname, string Adress)
+        public async Task AddOrder(string NameOfFood, string NameOfDrink, string Name, string Phone, string Adress)
         {
-            var order = new Order { Id = Guid.NewGuid(), NameOfFood = NameOfFood, NameOfDrink = NameOfDrink, Name = Name, Lastname = Lastname, Adress = Adress};
+            var order = new Order { Id = Guid.NewGuid(), NameOfFood = NameOfFood, NameOfDrink = NameOfDrink, Name = Name, Phone = Phone, Adress = Adress};
 
             _dbContext.Add(order);
             await _dbContext.SaveChangesAsync();
